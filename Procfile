@@ -1,1 +1,1 @@
-web: gunicorn jvn.wsgi
+web: gunicorn JVN.wsgi
