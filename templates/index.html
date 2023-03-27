@@ -7,30 +7,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Link to Style Sheet-->
     <link rel="stylesheet" href="/static/css/style.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <title>JVN</title>
 </head>
 
 <body>
-    <!--Logo & Title-->
-    <div>
-        <h1 class="title">Jon's Videogame News</h1>
-        <nav class="logo">
-            <a href="index.html" target="_blank">
-                <img class="logo" src="/static/images/JVN-Logo.jpg" alt="hll logo">
-            </a>
-    </div>
+
+
     <!-- Header and Navbar-->
-    <div class="navbar">
-        <div class="navbar-inner">
-            <a class="brand" href="#">JVN</a>
-            <ul class="nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">News</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="#">News</a>
+                <a class="nav-item nav-link" href="#">Contact</a>
+            </div>
         </div>
-    </div>
+        <div>
+            <div class="title">
+                <h1>Jon's Videogame News</h1>
+            </div>
+            <nav class="logo">
+                <a href="index.html" target="_blank">
+                    <img class="logo" src="/static/images/JVN-Logo.jpg" alt="hll logo">
+                </a>
+        </div>
+    </nav>
 
     <!---Login & Signup-->
     <div class="signup">

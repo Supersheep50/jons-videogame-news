@@ -18,6 +18,8 @@ body {
 .title {
     display: flex;
     text-align: center;
+
+
 }
 
 /** Logo **/
@@ -40,3 +42,10 @@ body {
     color: white;
     margin-bottom: 150px;
 }
+
+.background-photo img {
+    width: 120%;
+}
+
+
+/** Navbar **/
