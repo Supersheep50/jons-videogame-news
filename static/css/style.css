@@ -1,0 +1,42 @@
+html,
+body {
+    max-width: 100%;
+    max-height: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: azure;
+}
+
+
+/** Title **/
+.title {
+    display: flex;
+    text-align: center;
+}
+
+/** Logo **/
+.logo {
+    height: 200px;
+    display: flex;
+    text-align: left;
+    margin: auto;
+}
+
+/** Background Photo **/
+.background-photo {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    background-position: center 100%;
+    opacity: 0.5;
+    text-align: center;
+    color: white;
+    margin-bottom: 150px;
+}
