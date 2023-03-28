@@ -13,13 +13,12 @@ body {
     background-color: azure;
 }
 
-
-/** Title **/
-.title {
-    display: flex;
+h1 {
+    background-color: #ffffff;
+    margin: auto;
+    width: 100%;
     text-align: center;
-
-
+    font-family: 'Orbitron', sans-serif;
 }
 
 /** Logo **/
@@ -49,3 +48,34 @@ body {
 
 
 /** Navbar **/
+
+.nav-bar {
+    color: #1f1f1f;
+    font-size: 120%;
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing: 4px;
+    display: flex;
+    background-color: #ffffff;
+    height: 200px;
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-links li {
+    margin: 10px;
+    display: inline-block;
+    width: max-content;
+    text-align: center;
+}
+
+.nav-bar a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.nav-bar a:hover {
+    color: blue;
+}
