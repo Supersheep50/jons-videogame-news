@@ -1,3 +1,14 @@
+Credits for news articles
+
+https://www.ign.com/articles/the-witcher-3-next-gen-update-hands-on-preview
+
+Bootstrap Template for compononents and ideas
+
+
+
+
+
+
 # BookWorm -  Testing
 
 ![Bookworm](documentation/bookworm.png)
