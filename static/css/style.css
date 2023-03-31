@@ -12,7 +12,7 @@ body {
     background-color: azure;
 }
 
-h1 {
+.title {
 
     margin: auto;
     width: 100%;
@@ -54,7 +54,7 @@ h1 {
     font-family: 'Ubuntu', sans-serif;
     letter-spacing: 4px;
     display: flex;
-    background-color: #ffffff;
+    background-color: lightgrey;
     height: 200px;
 }
 
@@ -81,29 +81,46 @@ h1 {
 
 
 /* News Artciles */
-.news-preview {
 
-    display: block;
+section {
+    display: flex;
+    min-height: 70vh;
+    flex-direction: column;
+    text-align: center;
+}
+
+.col-md-10.col-lg-8.col-xl-7 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.news-preview {
+    margin-bottom: 10px;
     text-align: center;
 }
 
 
 /* Social Links */
+
+.footer {
+    margin-top: auto;
+}
+
 .social-links {
     text-align: center;
     text-decoration: none;
     letter-spacing: 30px;
-    background-color: #ffffff;
-    padding: 70px;
-    height: auto;
-    width: auto;
+    background-color: lightgrey;
+    height: 100px;
+    width: 100%;
 
 }
 
 .social-links li {
     display: inline;
     color: inherit;
-    background-color: #ffffff;
+    background-color: lightgrey;
+    padding-top: 50px;
 }
 
 .social-links :hover {
@@ -111,14 +128,13 @@ h1 {
 }
 
 .social-links-list {
-    background-color: #ffffff;
-    margin: auto;
+    background-color: lightgrey;
+    padding-top: 50px;
+
 }
 
 .copyright {
     font-size: 15px;
     text-align: center;
-    padding: 20px;
-    margin: 0 auto;
-    background-color: #ffffff;
+    background-color: lightgrey;
 }
