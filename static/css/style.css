@@ -13,12 +13,12 @@ body {
 }
 
 .title {
-
     margin: auto;
     width: 100%;
     text-align: center;
     font-family: 'Delicious Handrawn', cursive;
     color: white;
+    font-size: xx-large;
 }
 
 /** Logo **/
@@ -35,7 +35,6 @@ body {
     width: auto;
     height: auto;
     max-width: 100%;
-    max-height: 50%;
     background-position: center 100%;
     text-align: center;
     color: white;
@@ -44,7 +43,8 @@ body {
 
 .background-photo img {
     width: auto;
-    height: 750px;
+    height: auto;
+    max-width: 100%;
     text-align: center;
 }
 
@@ -52,18 +52,12 @@ body {
     width: auto;
     height: auto;
     max-width: 100%;
-    max-height: 50%;
-    background-position: center 100%;
+    background-position: right 100%;
     color: white;
     margin-bottom: 150px;
 }
 
-.background-photo-contact img {
-    width: auto;
-    height: 750px;
-    text-align: right;
 
-}
 
 
 
@@ -71,7 +65,7 @@ body {
 
 .nav-bar {
     color: white;
-    font-size: 120%;
+    font-size: x-large;
     font-family: 'Ubuntu', sans-serif;
     letter-spacing: 4px;
     display: flex;
@@ -154,7 +148,16 @@ section {
 }
 
 .copyright {
-    font-size: 15px;
+    font-size: xx-large;
     text-align: center;
+    color: white;
     background-color: #3D84A8
+}
+
+.fa-spotify,
+.fa-square-instagram,
+.fa-twitter {
+
+    color: white;
+    font-size: xx-large;
 }
