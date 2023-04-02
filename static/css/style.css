@@ -15,10 +15,11 @@ body {
 .title {
     margin: auto;
     width: 100%;
+    height: auto;
     text-align: center;
     font-family: 'Delicious Handrawn', cursive;
     color: white;
-    font-size: xx-large;
+
 }
 
 /** Logo **/
@@ -57,9 +58,12 @@ body {
     margin-bottom: 150px;
 }
 
-
-
-
+.background-photo-contact img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    text-align: center;
+}
 
 /** Navbar **/
 
@@ -67,15 +71,17 @@ body {
     color: white;
     font-size: x-large;
     font-family: 'Ubuntu', sans-serif;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
     display: flex;
     background-color: #3D84A8;
-    height: 200px;
+    width: 100%;
+    height: auto;
 }
 
 .nav-links {
     display: flex;
     list-style-type: none;
+
 }
 
 .nav-links li {
@@ -102,6 +108,10 @@ section {
     min-height: 70vh;
     flex-direction: column;
     text-align: center;
+}
+
+.section-about img {
+    text-align: left;
 }
 
 
@@ -161,3 +171,6 @@ section {
     color: white;
     font-size: xx-large;
 }
+
+
+section-about {}
