@@ -6,10 +6,7 @@ body {
     box-sizing: border-box;
     margin: 0;
     scroll-behavior: smooth;
-}
 
-body {
-    background-color: azure;
 }
 
 .title {
@@ -17,8 +14,11 @@ body {
     width: 100%;
     height: auto;
     text-align: center;
-    font-family: 'Delicious Handrawn', cursive;
     color: white;
+    margin-left: 200px;
+    font-family: 'Josefin Sans', sans-serif;
+
+
 
 }
 
@@ -70,7 +70,7 @@ body {
 .nav-bar {
     color: white;
     font-size: x-large;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     letter-spacing: 3px;
     display: flex;
     background-color: #3D84A8;
@@ -108,10 +108,13 @@ section {
     min-height: 70vh;
     flex-direction: column;
     text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+
 }
 
 .section-about img {
     text-align: left;
+
 }
 
 
@@ -135,8 +138,6 @@ section {
     background-color: #3D84A8;
     height: 200px;
     width: 100%;
-
-
 }
 
 .social-links li {
@@ -161,7 +162,10 @@ section {
     font-size: xx-large;
     text-align: center;
     color: white;
-    background-color: #3D84A8
+    background-color: #3D84A8;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+
 }
 
 .fa-spotify,
@@ -174,3 +178,9 @@ section {
 
 
 section-about {}
+
+.about-jvn {
+    width: 100%;
+    height: auto;
+
+}
