@@ -53,16 +53,16 @@ body {
     width: auto;
     height: auto;
     max-width: 100%;
-    background-position: right 100%;
     color: white;
     margin-bottom: 150px;
+    text-align: right;
 }
 
 .background-photo-contact img {
     width: auto;
     height: auto;
     max-width: 100%;
-    text-align: center;
+
 }
 
 /** Navbar **/
@@ -180,4 +180,9 @@ section {
 
     margin-top: 400px;
 
+
+}
+
+.meet-the-team img {
+    border-radius: 100%;
 }
