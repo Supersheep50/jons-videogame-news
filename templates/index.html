@@ -64,7 +64,7 @@
                                     <p class="author">Author: {{ post.author }}</p>
                                 </div>
                             </div>
-                            <a href="#" class="post-link">
+                            <a href="{% url 'post_detail' post.slug %}" class="post-link">
                                 <h2 class="card-title">{{ post.title }}</h2>
                                 <p class="card-text">{{ post.excerpt }}</p>
                             </a>
@@ -98,6 +98,8 @@
         {% endif %}
 
         {%endblock%}
+
+        <!--
         <a href="article.html">
             <h2 class="news-title">The Witcher 3 Next-Gen Update Hands-On Preview</h2>
             <h3 class="news-subtitle">So smooth</h3>
@@ -139,23 +141,24 @@
         </div>
     </section>
     <br>
-    <!-- Socials (some similiar code from previous project - A History of PlayStation) -->
-    <footer class="footer">
-        <div>
-            <div class="social-links">
-                <ul class="social-links-list">
-                    <li><a href="" target="_blank" rel="noopener"><i class="fa-brands fa-spotify"></i></a></li>
-                    <li><a href="" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a></li>
-                    <li><a href="" target="_blank" rel="noopener"><i class="fa-brands fa-square-instagram"></i></a>
-                    </li>
-                </ul>
+    -->
+        <!-- Socials (some similiar code from previous project - A History of PlayStation) -->
+        <footer class="footer">
+            <div>
+                <div class="social-links">
+                    <ul class="social-links-list">
+                        <li><a href="" target="_blank" rel="noopener"><i class="fa-brands fa-spotify"></i></a></li>
+                        <li><a href="" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="" target="_blank" rel="noopener"><i class="fa-brands fa-square-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-        <!--Copyright-->
-        <p class="copyright">Copyright <i class="fa-regular fa-copyright"></i> Jonathan Morrissey</p>
-    </footer>
-    <!--Font Awesome Script-->
-    <script src="https://kit.fontawesome.com/78446c3a66.js" crossorigin="anonymous"></script>
+            <!--Copyright-->
+            <p class="copyright">Copyright <i class="fa-regular fa-copyright"></i> Jonathan Morrissey</p>
+        </footer>
+        <!--Font Awesome Script-->
+        <script src="https://kit.fontawesome.com/78446c3a66.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
