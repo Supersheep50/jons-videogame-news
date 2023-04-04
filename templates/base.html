@@ -29,25 +29,32 @@
                 </a>
                 <h1 class="title">Jon's Videogame News!</h1>
                 <ul class="nav-links">
-                    <li> <a href="index.html">Home</a></li>
+                    <li> <a aria-current="page" href="{% url 'home' %}">Home</a></li>
                     <li> <a href="about.html">About</a></li>
                     <li> <a href="contact.html">Contact</a></li>
-                    <li> <a href="sign-up.html">Sign Up</a></li>
+                    {% if user.is_authenticated %}
+                    <li> <a href="{% url 'account_logout' %}">Logout</a></li>
+
+                    {% else %}
+                    <li> <a href="{% url 'account_signup' %}">Register</a></li>
+                    <li> <a href="{% url 'account_login' %}">Login</a></li>
+                    {% endif %}
                 </ul>
             </nav>
         </div>
     </header>
 
-    <div class="col-md-12 col-lg-8-col-xl-7">
-        {% block content %}
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        {% endblock content %}
+    <section>
+        <div class="col-md-12 col-lg-8-col-xl-7">
+            {% block content %}
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            {% endblock content %}
 
-    </div>
-
+        </div>
+    </section>
 
 
     <!-- Socials (some similiar code from previous project - A History of PlayStation) -->

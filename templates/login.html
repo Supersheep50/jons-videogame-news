@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <!--Link to Style Sheet-->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <title>JVN</title>
+</head>
+
+<body>
+
+
+    <!-- Header and Navbar-->
+    <header>
+        <div>
+            <nav class="nav-bar">
+                <a href="index.html" target="_blank">
+                    <img class="logo" src="/static/images/jvn-logo-2.jpg" alt="JVN logo">
+                </a>
+                <h1 class="title">Jon's Videogame News!</h1>
+                <ul class="nav-links">
+                    <li> <a href="index.html">Home</a></li>
+                    <li> <a href="about.html">About</a></li>
+                    <li> <a href="contact.html">Contact</a></li>
+                    <li> <a href="sign-up.html">Sign Up</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!---Background Photo-->
+    <div class="background-photo">
+        <img src="/static/images/background-image-sign-up.jpg" alt="image of lots of videogame consoles">
+    </div>
+    <!--Sign Up-->
+    <form class="form-horizontal" action='' method="POST">
+        <fieldset>
+            <div id="legend">
+                <legend class="">Register</legend>
+            </div>
+            <div class="control-group">
+                <!-- Username -->
+                <label class="control-label" for="username">Username</label>
+                <div class="controls">
+                    <input type="text" id="username" name="username" placeholder="" class="input-xlarge">
+                    <p class="help-block">Username can contain any letters or numbers, without spaces</p>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <!-- E-mail -->
+                <label class="control-label" for="email">E-mail</label>
+                <div class="controls">
+                    <input type="text" id="email" name="email" placeholder="" class="input-xlarge">
+                    <p class="help-block">Please provide your E-mail</p>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <!-- Password-->
+                <label class="control-label" for="password">Password</label>
+                <div class="controls">
+                    <input type="password" id="password" name="password" placeholder="" class="input-xlarge">
+                    <p class="help-block">Password should be at least 4 characters</p>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <!-- Password -->
+                <label class="control-label" for="password_confirm">Password (Confirm)</label>
+                <div class="controls">
+                    <input type="password" id="password_confirm" name="password_confirm" placeholder=""
+                        class="input-xlarge">
+                    <p class="help-block">Please confirm password</p>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <!-- Button -->
+                <div class="controls">
+                    <button class="btn btn-success">Register</button>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+    <br>
+    <!-- Socials (some similiar code from previous project - A History of PlayStation) -->
+    <footer class="footer">
+        <div>
+            <div class="social-links">
+                <ul class="social-links-list">
+                    <li><a href="" target="_blank" rel="noopener"><i class="fa-brands fa-spotify"></i></a></li>
+                    <li><a href="" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="" target="_blank" rel="noopener"><i class="fa-brands fa-square-instagram"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--Copyright-->
+        <p class="copyright">Copyright <i class="fa-regular fa-copyright"></i> Jonathan Morrissey</p>
+    </footer>
+    <!--Font Awesome Script-->
+    <script src="https://kit.fontawesome.com/78446c3a66.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
