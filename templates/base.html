@@ -1,5 +1,3 @@
-{%% extends "base.html" %}
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,56 +38,18 @@
         </div>
     </header>
 
-    {% block content %}
-    <!---Background Photo-->
-    <div class="background-photo">
-        <img src="/static/images/background-image-home.webp" alt="image of lots of videogame consoles">
+    <div class="col-md-12 col-lg-8-col-xl-7">
+        {% block content %}
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        {% endblock content %}
+
     </div>
-    <!--News Articles-->
-    <section>
-        <div class="col-md-12 col-lg-8-col-xl-7">
-            <div class="news-preview">
-                <a href="article.html">
-                    <h2 class="news-title">The Witcher 3 Next-Gen Update Hands-On Preview</h2>
-                    <h3 class="news-subtitle">So smooth</h3>
-                </a>
-                <p class="news-posted-by">
-                    Posted by Jonathan Morrissey on 29th March 2023
-                </p>
-            </div>
-            <br>
-            <div class="news-preview">
-                <a href="article.html">
-                    <h2 class="news-title">The Witcher 3 Next-Gen Update Hands-On Preview</h2>
-                    <h3 class="news-subtitle">So smooth</h3>
-                </a>
-                <p class="news-posted-by">
-                    Posted by Jonathan Morrissey on 29th March 2023
-                </p>
-            </div>
-            <br>
-            <div class="news-preview">
-                <a href="artcile.html">
-                    <h2 class="news-title">The Witcher 3 Next-Gen Update Hands-On Preview</h2>
-                    <h3 class="news-subtitle">So smooth</h3>
-                </a>
-                <p class="news-posted-by">
-                    Posted by Jonathan Morrissey on 29th March 2023
-                </p>
-            </div>
-            <br>
-            <div class="news-preview">
-                <a href="article.html">
-                    <h2 class="news-title">The Witcher 3 Next-Gen Update Hands-On Preview</h2>
-                    <h3 class="news-subtitle">So smooth</h3>
-                </a>
-                <p class="news-posted-by">
-                    Posted by Jonathan Morrissey on 29th March 2023
-                </p>
-            </div>
-        </div>
-    </section>
-    <br>
+
+
+
     <!-- Socials (some similiar code from previous project - A History of PlayStation) -->
     <footer class="footer">
         <div>
