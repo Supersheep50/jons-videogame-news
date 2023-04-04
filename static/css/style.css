@@ -186,3 +186,8 @@ section {
 .meet-the-team img {
     border-radius: 100%;
 }
+
+.form-horizontal {
+
+    text-align: center;
+}

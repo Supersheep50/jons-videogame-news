@@ -43,65 +43,56 @@
         <img src="/static/images/background-image-sign-up.jpg" alt="image of lots of videogame consoles">
     </div>
     <!--Sign Up-->
-    <section>
-        <form class="needs-validation" novalidate>
-            <div class="form-row">
-                <div class="col-md-4 mb-3">
-                    <label for="validationTooltip01">First name</label>
-                    <input type="text" class="form-control" id="validationTooltip01" placeholder="First name"
-                        value="Mark" required>
-                    <div class="valid-tooltip">
-                        Looks good!
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <label for="validationTooltip02">Last name</label>
-                    <input type="text" class="form-control" id="validationTooltip02" placeholder="Last name"
-                        value="Otto" required>
-                    <div class="valid-tooltip">
-                        Looks good!
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <label for="validationTooltipUsername">Username</label>
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
-                        </div>
-                        <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Username"
-                            aria-describedby="validationTooltipUsernamePrepend" required>
-                        <div class="invalid-tooltip">
-                            Please choose a unique and valid username.
-                        </div>
-                    </div>
+    <form class="form-horizontal" action='' method="POST">
+        <fieldset>
+            <div id="legend">
+                <legend class="">Register</legend>
+            </div>
+            <div class="control-group">
+                <!-- Username -->
+                <label class="control-label" for="username">Username</label>
+                <div class="controls">
+                    <input type="text" id="username" name="username" placeholder="" class="input-xlarge">
+                    <p class="help-block">Username can contain any letters or numbers, without spaces</p>
                 </div>
             </div>
-            <div class="form-row">
-                <div class="col-md-6 mb-3">
-                    <label for="validationTooltip03">City</label>
-                    <input type="text" class="form-control" id="validationTooltip03" placeholder="City" required>
-                    <div class="invalid-tooltip">
-                        Please provide a valid city.
-                    </div>
-                </div>
-                <div class="col-md-3 mb-3">
-                    <label for="validationTooltip04">State</label>
-                    <input type="text" class="form-control" id="validationTooltip04" placeholder="State" required>
-                    <div class="invalid-tooltip">
-                        Please provide a valid state.
-                    </div>
-                </div>
-                <div class="col-md-3 mb-3">
-                    <label for="validationTooltip05">Zip</label>
-                    <input type="text" class="form-control" id="validationTooltip05" placeholder="Zip" required>
-                    <div class="invalid-tooltip">
-                        Please provide a valid zip.
-                    </div>
+
+            <div class="control-group">
+                <!-- E-mail -->
+                <label class="control-label" for="email">E-mail</label>
+                <div class="controls">
+                    <input type="text" id="email" name="email" placeholder="" class="input-xlarge">
+                    <p class="help-block">Please provide your E-mail</p>
                 </div>
             </div>
-            <button class="btn btn-primary" type="submit">Submit form</button>
-        </form>
-    </section>
+
+            <div class="control-group">
+                <!-- Password-->
+                <label class="control-label" for="password">Password</label>
+                <div class="controls">
+                    <input type="password" id="password" name="password" placeholder="" class="input-xlarge">
+                    <p class="help-block">Password should be at least 4 characters</p>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <!-- Password -->
+                <label class="control-label" for="password_confirm">Password (Confirm)</label>
+                <div class="controls">
+                    <input type="password" id="password_confirm" name="password_confirm" placeholder=""
+                        class="input-xlarge">
+                    <p class="help-block">Please confirm password</p>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <!-- Button -->
+                <div class="controls">
+                    <button class="btn btn-success">Register</button>
+                </div>
+            </div>
+        </fieldset>
+    </form>
     <br>
     <!-- Socials (some similiar code from previous project - A History of PlayStation) -->
     <footer class="footer">
