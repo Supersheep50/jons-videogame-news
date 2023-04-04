@@ -1,146 +1,86 @@
 {% extends 'base.html' %} {% block content %}
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Google Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
-    <!--Link to Style Sheet-->
-    <link rel="stylesheet" href="/static/css/style.css">
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
-        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-    <title>JVN</title>
-</head>
-
-<body>
-
-
-    <!-- Header and Navbar-->
-    <header>
-        <div>
-            <nav class="nav-bar">
-                <a href="index.html" target="_blank">
-                    <img class="logo" src="/static/images/jvn-logo-2.jpg" alt="JVN logo">
-                </a>
-                <h1 class="title">Jon's Videogame News!</h1>
-                <ul class="nav-links">
-                    <li> <a href="index.html">Home</a></li>
-                    <li> <a href="about.html">About</a></li>
-                    <li> <a href="contact.html">Contact</a></li>
-                    <li> <a href="sign-up.html">Sign Up</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <div class="masthead">
-        <div class="container">
-            <div class="row g-0">
-                <div class="col-md-6 masthead-text">
-                    <!-- Post title goes in these h1 tags -->
-                    <h1 class="post-title">{{ post.title }}</h1>
-                    <!-- Post author goes before the | the post's created date goes after -->
-                    <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
-                </div>
-                <div class="d-none d-md-block col-md-6 masthead-image">
-                    <!-- The featured image URL goes in the src attribute -->
-                    {% if "placeholder" in post.featured_image.url %}
-                    <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
-                    {% else %}
-                    <img src=" {{ post.featured_image.url }}" width="100%">
-                    {% endif %}
-                </div>
-            </div>
-        </div>
-    </div>
-
+<div class="masthead">
     <div class="container">
-        <div class="row">
-            <div class="col card mb-4  mt-3 left  top">
-                <div class="card-body">
-                    <!-- The post content goes inside the card-text. -->
-                    <!-- Use the | safe filter inside the template tags -->
-                    <p class="card-text ">
-                        {{ post.content | safe }}
-                    </p>
-                    <div class="row">
+        <div class="row g-0">
+            <div class="col-md-6 masthead-text">
+                <!-- Post title goes in these h1 tags -->
+                <h1 class="post-title">{{ post.title }}</h1>
+                <!-- Post author goes before the | the post's created date goes after -->
+                <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
+            </div>
+            <div class="d-none d-md-block col-md-6 masthead-image">
+                <!-- The featured image URL goes in the src attribute -->
+                {% if "placeholder" in post.featured_image.url %}
+                <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
+                {% else %}
+                <img src=" {{ post.featured_image.url }}" width="100%">
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
 
-                        <div class="col-1">
-                            <!-- The number of likes goes before the closing strong tag -->
-                            <strong class="text-secondary"><i class="far fa-heart"></i> {{ post.number_of_likes }}
-                            </strong>
-                        </div>
-                        <div class="col-1">
-                            {% with comments.count as total_comments %}
-                            <strong class="text-secondary"><i class="far fa-comments"></i>
-                                <!-- Our total_comments variable goes before the closing strong tag -->
-                                {{ total_comments }}</strong>
-                            {% endwith %}
-                        </div>
+<div class="container">
+    <div class="row">
+        <div class="col card mb-4  mt-3 left  top">
+            <div class="card-body">
+                <!-- The post content goes inside the card-text. -->
+                <!-- Use the | safe filter inside the template tags -->
+                <p class="card-text ">
+                    {{ post.content | safe }}
+                </p>
+                <div class="row">
+
+                    <div class="col-1">
+                        <!-- The number of likes goes before the closing strong tag -->
+                        <strong class="text-secondary"><i class="far fa-heart"></i> {{ post.number_of_likes }}
+                        </strong>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <hr>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-8 card mb-4  mt-3 ">
-                <h3>Comments:</h3>
-                <div class="card-body">
-                    <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
-                    {% for comment in comments %}
-                    <div class="comments" style="padding: 10px;">
-                        <p class="font-weight-bold">
-                            <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
-                            {{ comment.name }}
-                            <span class=" text-muted font-weight-normal">
-                                <!-- The comment's created date goes here -->
-                                {{ comment.created_on }}
-                            </span> wrote:
-                        </p>
-                        <!-- The body of the comment goes before the | -->
-                        {{ comment.body | linebreaks }}
+                    <div class="col-1">
+                        {% with comments.count as total_comments %}
+                        <strong class="text-secondary"><i class="far fa-comments"></i>
+                            <!-- Our total_comments variable goes before the closing strong tag -->
+                            {{ total_comments }}</strong>
+                        {% endwith %}
                     </div>
-                    <!-- Our for loop ends here -->
-                    {% endfor %}
-                </div>
-            </div>
-            <div class="col-md-4 card mb-4  mt-3 ">
-                <div class="card-body">
-                    <!-- For later -->
                 </div>
             </div>
         </div>
     </div>
-
-    {% endblock content %}
-    <!-- Socials (some similiar code from previous project - A History of PlayStation) -->
-    <footer class="footer">
-        <div>
-            <div class="social-links">
-                <ul class="social-links-list">
-                    <li><a href="" target="_blank" rel="noopener"><i class="fa-brands fa-spotify"></i></a></li>
-                    <li><a href="" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a></li>
-                    <li><a href="" target="_blank" rel="noopener"><i class="fa-brands fa-square-instagram"></i></a>
-                    </li>
-                </ul>
+    <div class="row">
+        <div class="col">
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 card mb-4  mt-3 ">
+            <h3>Comments:</h3>
+            <div class="card-body">
+                <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
+                {% for comment in comments %}
+                <div class="comments" style="padding: 10px;">
+                    <p class="font-weight-bold">
+                        <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
+                        {{ comment.name }}
+                        <span class=" text-muted font-weight-normal">
+                            <!-- The comment's created date goes here -->
+                            {{ comment.created_on }}
+                        </span> wrote:
+                    </p>
+                    <!-- The body of the comment goes before the | -->
+                    {{ comment.body | linebreaks }}
+                </div>
+                <!-- Our for loop ends here -->
+                {% endfor %}
             </div>
         </div>
-        <!--Copyright-->
-        <p class="copyright">Copyright <i class="fa-regular fa-copyright"></i> Jonathan Morrissey</p>
-    </footer>
-    <!--Font Awesome Script-->
-    <script src="https://kit.fontawesome.com/78446c3a66.js" crossorigin="anonymous"></script>
-</body>
+        <div class="col-md-4 card mb-4  mt-3 ">
+            <div class="card-body">
+                <!-- For later -->
+            </div>
+        </div>
+    </div>
+</div>
 
-</html>
+{% endblock content %}

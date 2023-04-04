@@ -103,16 +103,9 @@ body {
 
 /* News Artciles */
 
-section {
-    display: flex;
-    min-height: 70vh;
-    flex-direction: column;
-    text-align: center;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: x-large;
-}
 
-.section-about img {
+
+.news-article img {
     text-align: left;
 
 }
@@ -191,9 +184,4 @@ section {
 
     text-align: center;
 
-}
-
-.col-md-12 .col-lg-8-col-xl-7 {
-
-    background-color: white;
 }

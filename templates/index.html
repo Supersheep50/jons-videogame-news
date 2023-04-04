@@ -1,165 +1,73 @@
 {% extends "base.html" %}
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Google Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
-    <!--Link to Style Sheet-->
-    <link rel="stylesheet" href="/static/css/style.css">
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
-        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-    <title>JVN</title>
-</head>
-
-<body>
-
-
-    <!-- Header and Navbar-->
-    <header>
-        <div>
-            <nav class="nav-bar ">
-                <a href="index.html" target="_blank">
-                    <img class="logo" src="/static/images/jvn-logo-2.jpg" alt="JVN logo">
-                </a>
-                <h1 class="title">Jon's Videogame News!</h1>
-                <ul class="nav-links">
-                    <li> <a href="index.html">Home</a></li>
-                    <li> <a href="about.html">About</a></li>
-                    <li> <a href="contact.html">Contact</a></li>
-                    <li> <a href="sign-up.html">Sign Up</a></li>
-                    <li> <a href="login.html">Login</a></li>
-                </ul>
-            </nav>
+{% block content %}
+<!---Background Photo-->
+<div class="background-photo">
+    <img src="/static/images/background-image-home.webp" alt="image of lots of videogame consoles">
+</div>
+<!--News Articles-->
+<section>
+    <div class="col-md-12 col-lg-8-col-xl-7">
+        {% for post in post_list %}
+        <div class="news-preview">
+            <a href="{% url 'post_detail' post.slug  %}">
+                <h2 class="news-title">{{ post.title }}</h2>
+                <h3 class="news-subtitle">{{ post.excerpt }}</h3>
+            </a>
+            <p class="news-posted-by">
+                Posted by {{ post.author }} on {{ post.created_on }}
+            </p>
+            <hr />
+            <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
+                {{ post.number_of_likes }}</p>
         </div>
-    </header>
-
-    {% block content %}
-    <!---Background Photo-->
-    <div class="background-photo">
-        <img src="/static/images/background-image-home.webp" alt="image of lots of videogame consoles">
+        <br>
+        <div class="news-preview">
+            <a href="{% url 'post_detail' post.slug  %}">
+                <h2 class="news-title">{{ post.title }}</h2>
+                <h3 class="news-subtitle">{{ post.excerpt }}</h3>
+            </a>
+            <p class="news-posted-by">
+                Posted by {{ post.author }} on {{ post.created_on }}
+            </p>
+            <hr />
+            <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
+                {{ post.number_of_likes }}</p>
+        </div>
+        <br>
+        <div class="news-preview">
+            <a href="{% url 'post_detail' post.slug  %}">
+                <h2 class="news-title">{{ post.title }}</h2>
+                <h3 class="news-subtitle">{{ post.excerpt }}</h3>
+            </a>
+            <p class="news-posted-by">
+                Posted by {{ post.author }} on {{ post.created_on }}
+            </p>
+            <hr />
+            <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
+                {{ post.number_of_likes }}</p>
+        </div>
+        <br>
+        <div class="news-preview">
+            <a href="{% url 'post_detail' post.slug  %}">
+                <h2 class="news-title">{{ post.title }}</h2>
+                <h3 class="news-subtitle">{{ post.excerpt }}</h3>
+            </a>
+            <p class="news-posted-by">
+                Posted by {{ post.author }} on {{ post.created_on }}
+            </p>
+            <hr />
+            <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
+                {{ post.number_of_likes }}</p>
+        </div>
     </div>
-    <!--News Articles-->
-    <section>
-        <div class="col-md-12 col-lg-8-col-xl-7">
-            <div class="news-preview">
-                {% for post in post_list %}
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <div class="image-container">
-                                {% if "placeholder" in post.featured_image.url %}
-                                <img class="card-img-top"
-                                    src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" alt="">
-                                {% else %}
-                                <img class="card-img-top" src="{{ post.featured_image.url }}" alt="">
-                                {% endif %}
-                                <div class="image-flash">
-                                    <p class="author">Author: {{ post.author }}</p>
-                                </div>
-                            </div>
-                            <a href="{% url 'post_detail' post.slug %}" class="post-link">
-                                <h2 class="card-title">{{ post.title }}</h2>
-                                <p class="card-text">{{ post.excerpt }}</p>
-                            </a>
-                            <hr>
-                            <p class="card-text text-muted h6"> {{ post.created_on }}
-                                <i class="far fa-heart"></i>{{ post.number_of_likes }}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                {% if forloop.counter|divisibleby:3 %}
-            </div>
-            <div class="row">
-                {% endif  %}
-                {% endfor %}
-            </div>
-        </div>
-        </div>
-        {% if is_paginated %}
-        <nav aria-label="Page navigation">
-            <ul class="pagination justify-content-center">
-                {% if page_obj.has_previous %}
-                <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV</a></li>
-                {% endif %}
-                {% if page_obj.has_next %}
-                <li><a href="?page={{ page_obj.next_page_number }}" class="page-link">NEXT &raquo;</a></li>
-                {% endif %}
-            </ul>
+    {% endfor %}
+</section>
+<br>
 
-        </nav>
-        {% endif %}
+<!-- Socials (some similiar code from previous project - A History of PlayStation) -->
 
-        {%endblock%}
-
-        <!--
-        <a href="article.html">
-            <h2 class="news-title">The Witcher 3 Next-Gen Update Hands-On Preview</h2>
-            <h3 class="news-subtitle">So smooth</h3>
-        </a>
-        <p class="news-posted-by">
-            Posted by Jonathan Morrissey on 29th March 2023
-        </p>
-        </div>
-        <br>
-        <div class="news-preview">
-            <a href="article.html">
-                <h2 class="news-title">The Witcher 3 Next-Gen Update Hands-On Preview</h2>
-                <h3 class="news-subtitle">So smooth</h3>
-            </a>
-            <p class="news-posted-by">
-                Posted by Jonathan Morrissey on 29th March 2023
-            </p>
-        </div>
-        <br>
-        <div class="news-preview">
-            <a href="artcile.html">
-                <h2 class="news-title">The Witcher 3 Next-Gen Update Hands-On Preview</h2>
-                <h3 class="news-subtitle">So smooth</h3>
-            </a>
-            <p class="news-posted-by">
-                Posted by Jonathan Morrissey on 29th March 2023
-            </p>
-        </div>
-        <br>
-        <div class="news-preview">
-            <a href="article.html">
-                <h2 class="news-title">The Witcher 3 Next-Gen Update Hands-On Preview</h2>
-                <h3 class="news-subtitle">So smooth</h3>
-            </a>
-            <p class="news-posted-by">
-                Posted by Jonathan Morrissey on 29th March 2023
-            </p>
-        </div>
-        </div>
-    </section>
-    <br>
-    -->
-        <!-- Socials (some similiar code from previous project - A History of PlayStation) -->
-        <footer class="footer">
-            <div>
-                <div class="social-links">
-                    <ul class="social-links-list">
-                        <li><a href="" target="_blank" rel="noopener"><i class="fa-brands fa-spotify"></i></a></li>
-                        <li><a href="" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a></li>
-                        <li><a href="" target="_blank" rel="noopener"><i class="fa-brands fa-square-instagram"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <!--Copyright-->
-            <p class="copyright">Copyright <i class="fa-regular fa-copyright"></i> Jonathan Morrissey</p>
-        </footer>
-        <!--Font Awesome Script-->
-        <script src="https://kit.fontawesome.com/78446c3a66.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
+{%endblock%}
