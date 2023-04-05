@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
 <!---Background Photo-->
@@ -21,53 +22,10 @@
             <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
                 {{ post.number_of_likes }}</p>
         </div>
-        <br>
-        <div class="news-preview">
-            <a href="{% url 'post_detail' post.slug  %}">
-                <h2 class="news-title">{{ post.title }}</h2>
-                <h3 class="news-subtitle">{{ post.excerpt }}</h3>
-            </a>
-            <p class="news-posted-by">
-                Posted by {{ post.author }} on {{ post.created_on }}
-            </p>
-            <hr />
-            <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
-                {{ post.number_of_likes }}</p>
-        </div>
-        <br>
-        <div class="news-preview">
-            <a href="{% url 'post_detail' post.slug  %}">
-                <h2 class="news-title">{{ post.title }}</h2>
-                <h3 class="news-subtitle">{{ post.excerpt }}</h3>
-            </a>
-            <p class="news-posted-by">
-                Posted by {{ post.author }} on {{ post.created_on }}
-            </p>
-            <hr />
-            <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
-                {{ post.number_of_likes }}</p>
-        </div>
-        <br>
-        <div class="news-preview">
-            <a href="{% url 'post_detail' post.slug  %}">
-                <h2 class="news-title">{{ post.title }}</h2>
-                <h3 class="news-subtitle">{{ post.excerpt }}</h3>
-            </a>
-            <p class="news-posted-by">
-                Posted by {{ post.author }} on {{ post.created_on }}
-            </p>
-            <hr />
-            <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
-                {{ post.number_of_likes }}</p>
-        </div>
     </div>
     {% endfor %}
 </section>
-<br>
-
-<!-- Socials (some similiar code from previous project - A History of PlayStation) -->
-
 </body>
 
 </html>
-{%endblock%}
+{% endblock %}
