@@ -1,26 +1,35 @@
-{% extends 'base.html' %} {% block content %}
+{% extends "base.html" %}
+
+{% load static %}
+{% block content %}
 
 <!---Background Photo-->
 <div class="background-photo">
-    <img src="/static/images/background-photo-about.jpg" alt="image of lots of videogame consoles">
+    <img src="{% static 'images/background-photo-about.jpg' %}" alt="image of lots of videogame consoles">
 </div>
 <!--About Section-->
 <section>
-    <div class="col-md-12 col-lg-8-col-xl-7">
-        <h1>About JVN</h1>
-        <h3>Here at JVN we strive to ensure that we provide you with the most up to date and accurate videogame
-            news.
-        </h3>
-        <h3>Like you, we love videogames! We have a diverse team of game journalists who are passionate about what
-            they do!
-        </h3>
-        <h3>Our team love everythoing from platformers like Super Mario to action orientated first person shooters
-            like Call of Duty. Diversity is the spice of life!</h3>
-        <h3>We're always keen to hear from you so feel free to head to our Contact page to get in touch with any
-            news tips, questions or comments you may have!</h3>
+    <div class="row">
+        <div class="col-md-12 col-lg-8-col-xl-7">
+            <div class="news-preview">
+                <h1>About JVN</h1>
+                <h3>Here at JVN we strive to ensure that we provide you with the most up to date and accurate videogame
+                    news.
+                </h3>
+                <h3>Like you, we love videogames! We have a diverse team of game journalists who are passionate about
+                    what
+                    they do!
+                </h3>
+                <h3>Our team love everythoing from platformers like Super Mario to action orientated first person
+                    shooters
+                    like Call of Duty. Diversity is the spice of life!</h3>
+                <h3>We're always keen to hear from you so feel free to head to our Contact page to get in touch with any
+                    news tips, questions or comments you may have!</h3>
+            </div>
+        </div>
     </div>
     <br>
-    <div class="meet-the-team">
+    <div class="meet-the-team row">
         <h1>Meet the Team</h1>
         <div class="col-lg-4">
             <img src="/static/images/meet-the-team-jon-image.jpeg" alt="Photo of team member Jonathan">
@@ -41,9 +50,5 @@
         </div>
     </div>
 </section>
-<br>
 
-</body>
-
-</html>
-{% endblock content %}
+{% endblock content  %}

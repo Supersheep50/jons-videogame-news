@@ -1,8 +1,11 @@
-{% extends 'base.html' %} {% block content %}
+{% extends "base.html" %}
+
+{% load static %}
+{% block content %}
 
 <!---Background Photo-->
 <div class="background-photo-contact">
-    <img src="/static/images/background-photo-contact.webp" alt="image of lots of videogame consoles">
+    <img src="{% static 'images/background-photo-contact.webp' %}" alt="image of lots of videogame consoles">
 </div>
 <!--Contact Us-->
 
@@ -53,9 +56,5 @@
         </div>
     </div>
 </div>
-<br>
 
-</body>
-
-</html>
 {% endblock content %}

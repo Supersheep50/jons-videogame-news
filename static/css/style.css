@@ -103,19 +103,17 @@ body {
 
 /* News Artciles */
 
-
-
-.news-article img {
-    text-align: left;
-
-}
-
-
-.news-preview {
+.news-posts {
     margin-bottom: 10px;
     text-align: center;
     width: 100%;
 }
+
+.news-posts img {
+    text-align: left;
+
+}
+
 
 
 /* Social Links */

@@ -4,7 +4,7 @@
 {% block content %}
 <!---Background Photo-->
 <div class="background-photo">
-    <img src="/static/images/background-image-home.webp" alt="image of lots of videogame consoles">
+    <img src="{% static 'images/background-image-home.webp' %}" alt="image of lots of videogame consoles">
 </div>
 <!--News Articles-->
 <section>
@@ -12,8 +12,12 @@
         {% for post in post_list %}
         <div class="news-preview">
             <a href="{% url 'post_detail' post.slug  %}">
-                <h2 class="news-title">{{ post.title }}</h2>
-                <h3 class="news-subtitle">{{ post.excerpt }}</h3>
+                <div>
+                    <h2 class="news-title">{{ post.title }}</h2>
+                </div>
+                <div>
+                    <h3 class="news-subtitle">{{ post.excerpt }}</h3>
+                </div>
             </a>
             <p class="news-posted-by">
                 Posted by {{ post.author }} on {{ post.created_on }}
