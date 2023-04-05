@@ -31,7 +31,7 @@
                 <h1 class="title">Jon's Videogame News!</h1>
                 <ul class="nav-links">
                     <li> <a aria-current="page" href="{% url 'home' %}">Home</a></li>
-                    <li> <a href="about.html">About</a></li>
+                    <li> <a href="{% url 'about' %}">About</a></li>
                     <li> <a href="contact.html">Contact</a></li>
                     {% if user.is_authenticated %}
                     <li> <a href="{% url 'account_logout' %}">Logout</a></li>

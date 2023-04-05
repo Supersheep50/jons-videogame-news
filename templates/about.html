@@ -1,103 +1,48 @@
 {% extends 'base.html' %} {% block content %}
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Google Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
-    <!--Link to Style Sheet-->
-    <link rel="stylesheet" href="/static/css/style.css">
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
-        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-    <title>JVN</title>
-</head>
-
-<body>
-
-
-    <!-- Header and Navbar-->
-    <header>
-        <div>
-            <nav class="nav-bar">
-                <a href="index.html" target="_blank">
-                    <img class="logo" src="/static/images/jvn-logo-2.jpg" alt="JVN logo">
-                </a>
-                <h1 class="title">Jon's Videogame News!</h1>
-                <ul class="nav-links">
-                    <li> <a href="index.html">Home</a></li>
-                    <li> <a href="about.html">About</a></li>
-                    <li> <a href="contact.html">Contact</a></li>
-                    <li> <a href="sign-up.html">Sign Up</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!---Background Photo-->
-    <div class="background-photo">
-        <img src="/static/images/background-photo-about.jpg" alt="image of lots of videogame consoles">
+<!---Background Photo-->
+<div class="background-photo">
+    <img src="/static/images/background-photo-about.jpg" alt="image of lots of videogame consoles">
+</div>
+<!--About Section-->
+<section>
+    <div class="col-md-12 col-lg-8-col-xl-7">
+        <h1>About JVN</h1>
+        <h3>Here at JVN we strive to ensure that we provide you with the most up to date and accurate videogame
+            news.
+        </h3>
+        <h3>Like you, we love videogames! We have a diverse team of game journalists who are passionate about what
+            they do!
+        </h3>
+        <h3>Our team love everythoing from platformers like Super Mario to action orientated first person shooters
+            like Call of Duty. Diversity is the spice of life!</h3>
+        <h3>We're always keen to hear from you so feel free to head to our Contact page to get in touch with any
+            news tips, questions or comments you may have!</h3>
     </div>
-    <!--About Section-->
-    <section>
-        <div class="col-md-12 col-lg-8-col-xl-7">
-            <h1>About JVN</h1>
-            <h3>Here at JVN we strive to ensure that we provide you with the most up to date and accurate videogame
-                news.
-            </h3>
-            <h3>Like you, we love videogames! We have a diverse team of game journalists who are passionate about what
-                they do!
-            </h3>
-            <h3>Our team love everythoing from platformers like Super Mario to action orientated first person shooters
-                like Call of Duty. Diversity is the spice of life!</h3>
-            <h3>We're always keen to hear from you so feel free to head to our Contact page to get in touch with any
-                news tips, questions or comments you may have!</h3>
-        </div>
-        <br>
-        <div class="meet-the-team">
-            <h1>Meet the Team</h1>
-            <div class="col-lg-4">
-                <img src="/static/images/meet-the-team-jon-image.jpeg" alt="Photo of team member Jonathan">
-                <h3>Jonathan</h3>
-                <p>Loves games almost as much as he loves food. Favorite games are Skyrim, The Witcher and the Metal
-                    Gear Solid series.</p>
-            </div>
-            <div class="col-lg-4">
-                <img src="/static/images/meet-the-team-steph-image.jpeg" alt="Photo of team memeber Stephanie">
-                <h3>Stephanie</h3>
-                <p>Her boyfriends name is Garrus (yes that one). Huge Mass Effect and Assassin Creed fan.</p>
-
-            </div>
-            <div class="col-lg-4">
-                <img src="/static/images/meet-the-team-mystique-image.jpeg" alt="JVN logo">
-                <h3>Mystique</h3>
-                <p>Shes a cat so doesn't play videogames. If she had a favorite it would be Stray.</p>
-            </div>
-        </div>
-    </section>
     <br>
-    <!-- Socials (some similiar code from previous project - A History of PlayStation) -->
-    <footer class="footer">
-        <div>
-            <div class="social-links">
-                <ul class="social-links-list">
-                    <li><a href="" target="_blank" rel="noopener"><i class="fa-brands fa-spotify"></i></a></li>
-                    <li><a href="" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a></li>
-                    <li><a href="" target="_blank" rel="noopener"><i class="fa-brands fa-square-instagram"></i></a>
-                    </li>
-                </ul>
-            </div>
+    <div class="meet-the-team">
+        <h1>Meet the Team</h1>
+        <div class="col-lg-4">
+            <img src="/static/images/meet-the-team-jon-image.jpeg" alt="Photo of team member Jonathan">
+            <h3>Jonathan</h3>
+            <p>Loves games almost as much as he loves food. Favorite games are Skyrim, The Witcher and the Metal
+                Gear Solid series.</p>
         </div>
-        <!--Copyright-->
-        <p class="copyright">Copyright <i class="fa-regular fa-copyright"></i> Jonathan Morrissey</p>
-    </footer>
-    <!--Font Awesome Script-->
-    <script src="https://kit.fontawesome.com/78446c3a66.js" crossorigin="anonymous"></script>
+        <div class="col-lg-4">
+            <img src="/static/images/meet-the-team-steph-image.jpeg" alt="Photo of team memeber Stephanie">
+            <h3>Stephanie</h3>
+            <p>Her boyfriends name is Garrus (yes that one). Huge Mass Effect and Assassin Creed fan.</p>
+
+        </div>
+        <div class="col-lg-4">
+            <img src="/static/images/meet-the-team-mystique-image.jpeg" alt="JVN logo">
+            <h3>Mystique</h3>
+            <p>Shes a cat so doesn't play videogames. If she had a favorite it would be Stray.</p>
+        </div>
+    </div>
+</section>
+<br>
+
 </body>
 
 </html>
