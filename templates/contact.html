@@ -1,114 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %} {% block content %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Google Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
-    <!--Link to Style Sheet-->
-    <link rel="stylesheet" href="/static/css/style.css">
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
-        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-    <title>JVN</title>
-</head>
+<!---Background Photo-->
+<div class="background-photo-contact">
+    <img src="/static/images/background-photo-contact.webp" alt="image of lots of videogame consoles">
+</div>
+<!--Contact Us-->
 
-<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="well well-sm">
+                <form class="form-horizontal" action="" method="post">
+                    <fieldset>
+                        <legend class="text-center">Contact us</legend>
 
-
-    <!-- Header and Navbar-->
-    <header>
-        <div>
-            <nav class="nav-bar">
-                <a href="index.html" target="_blank">
-                    <img class="logo" src="/static/images/jvn-logo-2.jpg" alt="JVN logo">
-                </a>
-                <h1 class="title">Jon's Videogame News!</h1>
-                <ul class="nav-links">
-                    <li> <a href="index.html">Home</a></li>
-                    <li> <a href="about.html">About</a></li>
-                    <li> <a href="contact.html">Contact</a></li>
-                    <li> <a href="sign-up.html">Sign Up</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!---Background Photo-->
-    <div class="background-photo-contact">
-        <img src="/static/images/background-photo-contact.webp" alt="image of lots of videogame consoles">
-    </div>
-    <!--Contact Us-->
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="well well-sm">
-                    <form class="form-horizontal" action="" method="post">
-                        <fieldset>
-                            <legend class="text-center">Contact us</legend>
-
-                            <!-- Name input-->
-                            <div class="form-group">
-                                <label class="col-md-3 control-label" for="name">Name</label>
-                                <div class="col-md-9">
-                                    <input id="name" name="name" type="text" placeholder="Your name"
-                                        class="form-control input-lg">
-                                </div>
+                        <!-- Name input-->
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="name">Name</label>
+                            <div class="col-md-9">
+                                <input id="name" name="name" type="text" placeholder="Your name"
+                                    class="form-control input-lg">
                             </div>
+                        </div>
 
-                            <!-- Email input-->
-                            <div class="form-group">
-                                <label class="col-md-3 control-label" for="email">Your E-mail</label>
-                                <div class="col-md-9">
-                                    <input id="email" name="email" type="text" placeholder="Your email"
-                                        class="form-control input-lg">
-                                </div>
+                        <!-- Email input-->
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="email">Your E-mail</label>
+                            <div class="col-md-9">
+                                <input id="email" name="email" type="text" placeholder="Your email"
+                                    class="form-control input-lg">
                             </div>
+                        </div>
 
-                            <!-- Message body -->
-                            <div class="form-group">
-                                <label class="col-md-3 control-label" for="message">Your message</label>
-                                <div class="col-md-9">
-                                    <textarea class="form-control input-lg" id="message" name="message"
-                                        placeholder="Please enter your message here..." rows="8"></textarea>
-                                </div>
+                        <!-- Message body -->
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="message">Your message</label>
+                            <div class="col-md-9">
+                                <textarea class="form-control input-lg" id="message" name="message"
+                                    placeholder="Please enter your message here..." rows="8"></textarea>
                             </div>
+                        </div>
 
-                            <!-- Form actions -->
-                            <div class="form-group">
-                                <div class="col-md-12 text-right">
-                                    <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-                                </div>
+                        <!-- Form actions -->
+                        <div class="form-group">
+                            <div class="col-md-12 text-right">
+                                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
                             </div>
-                        </fieldset>
-                    </form>
-                </div>
+                        </div>
+                    </fieldset>
+                </form>
             </div>
         </div>
     </div>
-    <br>
-    <!-- Socials (some similiar code from previous project - A History of PlayStation) -->
-    <footer class="footer">
-        <div>
-            <div class="social-links">
-                <ul class="social-links-list">
-                    <li><a href="" target="_blank" rel="noopener"><i class="fa-brands fa-spotify"></i></a></li>
-                    <li><a href="" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a></li>
-                    <li><a href="" target="_blank" rel="noopener"><i class="fa-brands fa-square-instagram"></i></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!--Copyright-->
-        <p class="copyright">Copyright <i class="fa-regular fa-copyright"></i> Jonathan Morrissey</p>
-    </footer>
-    <!--Font Awesome Script-->
-    <script src="https://kit.fontawesome.com/78446c3a66.js" crossorigin="anonymous"></script>
+</div>
+<br>
+
 </body>
 
 </html>
+{% endblock content %}
