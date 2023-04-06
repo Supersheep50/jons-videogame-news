@@ -190,3 +190,20 @@ body {
     text-align: center;
 
 }
+
+.contact-form {
+
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.sign-up-form {
+
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+}
+
+.login-page {
+
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+}
