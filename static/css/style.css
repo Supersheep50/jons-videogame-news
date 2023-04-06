@@ -120,6 +120,7 @@ body {
 
 .footer {
     margin-top: auto;
+
 }
 
 .social-links {
@@ -167,10 +168,16 @@ body {
     font-size: xx-large;
 }
 
+.about {
+
+    font-family: 'Josefin Sans', sans-serif;
+    letter-spacing: 2px;
+}
+
 .meet-the-team {
 
-    margin-top: 400px;
-
+    margin-top: 30px;
+    font-family: 'Josefin Sans', sans-serif;
 
 }
 
