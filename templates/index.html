@@ -8,9 +8,9 @@
 </div>
 <!--News Articles-->
 <section>
-    <div class="col-md-12 col-lg-8-col-xl-7">
+    <div class="col-md-12 col-lg-8-col-xl-7 news-posts">
         {% for post in post_list %}
-        <div class="news-preview">
+        <div class="news-preview news-posts">
             <a href="{% url 'post_detail' post.slug  %}">
                 <div>
                     <h2 class="news-title">{{ post.title }}</h2>
