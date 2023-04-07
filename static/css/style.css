@@ -207,3 +207,60 @@ body {
     font-family: 'Josefin Sans', sans-serif;
     text-align: center;
 }
+
+
+@media screen and (max-width:1190px) {
+
+    .nav-bar {
+        width: auto;
+        height: auto;
+        flex-direction: column-reverse;
+        text-align: left;
+    }
+
+    .title {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 580px) {
+
+    .nav-bar {
+        width: auto;
+        height: auto;
+        font-size: medium;
+    }
+}
+
+
+@media screen and (max-width:460px) {
+
+    .nav-bar {
+        width: auto;
+        height: auto;
+        font-size: small;
+        flex-direction: column-reverse;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .nav-bar {
+        width: auto;
+        height: auto;
+        font-size: x-small;
+        flex-direction: column-reverse;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .nav-bar {
+        width: auto;
+        height: auto;
+        font-size: xx-small;
+        flex-direction: column-reverse;
+    }
+
+    .nav-links {
+        text-align: left;
+    }
+}
