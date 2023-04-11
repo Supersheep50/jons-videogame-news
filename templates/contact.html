@@ -8,19 +8,14 @@
     <img src="{% static 'images/background-photo-contact.webp' %}" alt="image of lots of videogame consoles">
 </div>
 
-<!---
-<form class="form-new" action="" method="post">
-    {% csrf_token %}
-    {{ form }}
-    <input type="submit" value="Submit">
-</form>
---->
+<!--Conatct form code-->
 <div class="container contact-form">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="well well-sm">
                 <form class="form-horizontal" method="POST">
                     {% csrf_token %}
+                    {{ form }}
                     <fieldset>
                         <legend class="text-center">Contact us</legend>
                         <div class="form-group">
