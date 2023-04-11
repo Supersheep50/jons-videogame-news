@@ -53,9 +53,10 @@
         <div class="row">
             <div class="col-md-8 offset-md-2 alert-msg">
                 {% for message in messages %}
-                <div class="alert {{ message.tags }} alert-dismissible" id="msg" role="alert">
+                <div class="alert alert-warning {{ message.tags }} alert-dismissible" id="msg" role="alert">
                     {{ message | safe }}
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
                 </div>
                 {% endfor %}
             </div>
@@ -98,7 +99,7 @@
             let messages = document.getElementById('msg');
             let alert = new bootstrap.Alert(messages);
             alert.close();
-        }, 3500);
+        }, 2000);
     </script>
     <!--Font Awesome Script-->
     <script src="https://kit.fontawesome.com/78446c3a66.js" crossorigin="anonymous"></script>
