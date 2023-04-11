@@ -9,6 +9,7 @@ body {
 
 }
 
+/* Title */
 .title {
     margin: auto;
     width: 100%;
@@ -17,9 +18,6 @@ body {
     color: white;
     margin-left: 200px;
     font-family: 'Josefin Sans', sans-serif;
-
-
-
 }
 
 /** Logo **/
@@ -115,7 +113,6 @@ body {
 }
 
 
-
 /* Social Links */
 
 .footer {
@@ -168,6 +165,8 @@ body {
     font-size: xx-large;
 }
 
+
+/* About Section */
 .about {
 
     font-family: 'Josefin Sans', sans-serif;
@@ -185,6 +184,8 @@ body {
     border-radius: 100%;
 }
 
+
+/* Register and Login Form */
 .form-horizontal {
 
     text-align: center;
@@ -200,21 +201,34 @@ body {
 
     font-family: 'Josefin Sans', sans-serif;
     text-align: center;
+    width: 100%;
+    height: auto;
+    font-size: large;
+}
+
+.signup-h3 {
+    text-align: center;
+}
+
+.welcome-back {
+    text-align: center;
 }
 
 .login-page {
 
     font-family: 'Josefin Sans', sans-serif;
     text-align: center;
-}
-
-
-.alert-msg {
-
-    width: auto;
+    width: 100%;
     height: auto;
+    font-size: large;
 }
 
+/* Alert Message */
+
+
+
+
+/* Responsiveness */
 @media screen and (max-width:1190px) {
 
     .nav-bar {

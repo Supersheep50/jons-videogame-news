@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .forms import ContactForm
 
-
+#Contact form view
 def contact_view(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)

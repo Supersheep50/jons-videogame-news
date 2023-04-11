@@ -6,25 +6,28 @@
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 
 {% block content %}
-<div class="container">
-  <div class="row">
-    <div class="col-md-8 mt-3 offset-md-2 sign-up-form">
-      <h3>{% trans "Sign Up" %}</h3>
 
-      <p>{% blocktrans %}Welcome back to JVN! Do you already have an account? Then please <a class="link"
-          href="{{ login_url }}">sign in</a> instead.{% endblocktrans %}</p>
+<div class="justify-content-center align-items-center">
+  <div class="container text-center">
+    <div class="row ">
+      <div class="col-md-8 mt-3">
+        <h3 class="signup-h3">{% trans "Sign Up" %}</h3>
+
+        <p class="welcome-back">{% blocktrans %}Welcome back to JVN! Do you already have an account? Then please <a
+            class="link" href="{{ login_url }}">sign in</a> instead.{% endblocktrans %}</p>
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-md-8 mt-3 offset-md-2">
-      <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
-        {% csrf_token %}
-        {{ form.as_p }}
-        {% if redirect_field_value %}
-        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-        {% endif %}
-        <button class="btn btn-signup right" type="submit">{% trans "Sign Up" %} &raquo;</button>
-      </form>
+    <div class="row">
+      <div class="col-md-8 mt-3">
+        <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+          {% csrf_token %}
+          {{ form.as_p }}
+          {% if redirect_field_value %}
+          <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+          {% endif %}
+          <button class="btn btn-signup right" type="submit">{% trans "Sign Up" %} &raquo;</button>
+        </form>
+      </div>
     </div>
   </div>
 </div>

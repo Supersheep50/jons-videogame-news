@@ -66,7 +66,9 @@ class PostDetail(View):
             },
         )
 
-#Code for Like functionality
+# Code for Like functionality
+
+
 class PostLike(View):
     
     def post(self, request, slug, *args, **kwargs):
