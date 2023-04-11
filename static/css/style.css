@@ -99,6 +99,11 @@ body {
 }
 
 
+.nav-links li.active a {
+    text-decoration: underline;
+}
+
+
 /* News Artciles */
 
 .news-posts {
@@ -197,18 +202,10 @@ body {
     font-family: 'Josefin Sans', sans-serif;
 }
 
-.sign-up-form {
-
-    font-family: 'Josefin Sans', sans-serif;
-    text-align: center;
-    width: 100%;
-    height: auto;
-    font-size: large;
+.register-form {
+    flex-direction: column;
 }
 
-.signup-h3 {
-    text-align: center;
-}
 
 .welcome-back {
     text-align: center;
@@ -223,10 +220,14 @@ body {
     font-size: large;
 }
 
+
 /* Alert Message */
 
 
-
+.alert-msg {
+    position: relative;
+    z-index: 9999;
+}
 
 /* Responsiveness */
 @media screen and (max-width:1190px) {

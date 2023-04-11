@@ -23,18 +23,20 @@
 
 <body>
     <!-- Header and Navbar-->
-
     <header>
         <div>
             <nav class="nav-bar ">
-                <a href="index.html" target="_blank">
+                <a href="{% url 'home' %}">
                     <img class="logo" src="/static/images/jvn-logo-2.jpg" alt="JVN logo">
                 </a>
                 <h1 class="title">Jon's Videogame News!</h1>
                 <ul class="nav-links">
-                    <li> <a aria-current="page" href="{% url 'home' %}">Home</a></li>
-                    <li> <a href="{% url 'about' %}">About</a></li>
-                    <li> <a href="{% url 'contact' %}">Contact</a></li>
+                    <li {% if request.path == '/' %}class="active" {% endif %}> <a aria-current="page"
+                            href="{% url 'home' %}">Home</a></li>
+                    <li {% if request.path == '/about/' %}class="active" {% endif %}> <a
+                            href="{% url 'about' %}">About</a></li>
+                    <li {% if request.path == '/contact/' %}class="active" {% endif %}> <a
+                            href="{% url 'contact' %}">Contact</a></li>
                     {% if user.is_authenticated %}
                     <li> <a href="{% url 'account_logout' %}">Logout</a></li>
 
@@ -45,14 +47,13 @@
                 </ul>
             </nav>
         </div>
-
     </header>
     <!-- Message Alert -->
     <div class="container">
         <div class="row">
             <div class="col-md-8 offset-md-2 alert-msg">
                 {% for message in messages %}
-                <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+                <div class="alert {{ message.tags }} alert-dismissible" id="msg" role="alert">
                     {{ message | safe }}
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>

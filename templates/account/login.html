@@ -8,9 +8,9 @@
 
 {% block content %}
 
-<div class="container login-page">
+<div class="container">
   <div class="row">
-    <div class="col-md-8 mt-3 offset-md-2 login-page">
+    <div class="col-md-12 mt-3 text-center register-form">
       <h3>{% trans "Sign In" %}</h3>
 
       <p>{% blocktrans %}Welcome back to JVN! To leave a comment or like a post, please log in. If you
@@ -19,7 +19,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-8 mt-3 offset-md-2">
+    <div class="col-md-12 mt-3 text-center">
       <form class="login" method="POST" action="{% url 'account_login' %}">
         {% csrf_token %}
         {{ form.as_p }}
