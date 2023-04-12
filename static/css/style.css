@@ -197,15 +197,6 @@ body {
 
 }
 
-input[type=text],
-input[type=email],
-textarea {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-}
-
 .register-form {
     flex-direction: column;
     font-family: 'Josefin Sans', sans-serif;
@@ -221,15 +212,6 @@ textarea {
 
 .welcome-back {
     text-align: center;
-}
-
-.login-page {
-
-    font-family: 'Josefin Sans', sans-serif;
-    text-align: center;
-    width: 100%;
-    height: auto;
-    font-size: large;
 }
 
 
