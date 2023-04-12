@@ -177,8 +177,8 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-CONTACT_EMAIL = 'jonathan.morrisseyto@gmail.com'
-ADMIN_EMAILS = ['admin@example.com', ]
+CONTACT_EMAIL = 'jonathan.morrisseyto@gmail.com',
+ADMIN_EMAIL = 'jonathan.morrisseyto@gmail.com', 
 
 
 # Twilio SendGrid
