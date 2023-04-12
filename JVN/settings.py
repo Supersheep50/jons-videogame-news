@@ -16,7 +16,8 @@ from django.contrib.messages import constants as messages
 import dj_database_url
 if os.path.isfile("env.py"):
     import env
-
+from dotenv import load_dotenv
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -174,3 +175,15 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+CONTACT_EMAIL = 'jonathan.morrisseyto@gmail.com'
+ADMIN_EMAILS = ['admin@example.com', ]
+
+
+# Twilio SendGrid
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'apikey'
+EMAIL_HOST_PASSWORD = os.environ.get('SENDGRID_API_KEY')

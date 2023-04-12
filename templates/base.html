@@ -36,7 +36,7 @@
                     <li {% if request.path == '/about/' %}class="active" {% endif %}> <a
                             href="{% url 'about' %}">About</a></li>
                     <li {% if request.path == '/contact/' %}class="active" {% endif %}> <a
-                            href="{% url 'contact' %}">Contact</a></li>
+                            href="{% url 'contact_view' %}">Contact</a></li>
                     {% if user.is_authenticated %}
                     <li> <a href="{% url 'account_logout' %}">Logout</a></li>
 

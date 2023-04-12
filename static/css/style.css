@@ -237,6 +237,14 @@ body {
     z-index: 9999;
 }
 
+
+.input-form {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+}
+
 /* Responsiveness */
 @media screen and (max-width:1190px) {
 
