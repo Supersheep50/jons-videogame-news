@@ -8,15 +8,16 @@
     <img src="{% static 'images/background-photo-contact.webp' %}" alt="image of lots of videogame consoles">
 </div>
 
-
-<form action="{% url 'contact_view' %}" method="POST">
-    {% csrf_token %}
-    {{ form }}
-    <button class="input-form" value="Submit">Submit</button>
-</form>
-
-
-
-
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 mt-3 text-center register-form">
+            <form action="{% url 'contact_view' %}" method="POST">
+                {% csrf_token %}
+                {{ form }}
+                <button class="input-form" value="Submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
 
 {% endblock content %}
