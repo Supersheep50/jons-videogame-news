@@ -8,13 +8,22 @@
     <img src="{% static 'images/background-photo-contact.webp' %}" alt="image of lots of videogame consoles">
 </div>
 
+<!--Contact Us info and form-->
+<div class="contact-info news-posts">
+    <h1>Contact Us!</h1>
+    <h2>We'd love to hear from you over here at JVN! If you have any videogame news, tips or even just want to shoot us
+        a message, feel free to contact us below and we'll get back to you as soon as we can!</h2>
+</div>
+<br>
+<br>
+<br>
 <div class="container">
     <div class="row">
         <div class="col-md-12 mt-3 text-center register-form">
             <form action="{% url 'contact_view' %}" method="POST">
                 {% csrf_token %}
-                {{ form }}
-                <button value="Submit">Submit</button>
+                {{ form.as_p }}
+                <button class="btn btn-signup right buttons" value="Submit">Submit</button>
             </form>
         </div>
     </div>
