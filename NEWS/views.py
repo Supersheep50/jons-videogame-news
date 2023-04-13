@@ -45,10 +45,6 @@ class PostDetail(View):
         liked = False
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
-
-        if 'edit_comment' in request.POST:
-            return self.edit_comment(request, request.POST['edit_comment'])
-
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
             comment_form.instance.email = request.user.email
@@ -71,19 +67,19 @@ class PostDetail(View):
             },
         )
 
-    def edit_comment(self, request, comment_id):
-        comment = get_object_or_404(Comment, id=comment_id)
-
+    def edit_item(request, item_id):
+        item = get_object_or_404(Item, id=item_id)
         if request.method == 'POST':
-            form = CommentForm(request.POST, instance=comment)
-            if form.is_valid():
-                form.save()
-                messages.success(request, 'Your comment has been updated.')
-                return redirect('home')
-        else:
-            form = CommentForm(instance=comment)
+            form = ItemForm(request.POST, instance=item)
+        if form.is_valid():
+            form.save()
+            return redirect('edit_item')
 
-        return render(request, 'edit_comment.html', {'form': form, 'comment': comment})
+        form = ItemForm(instance=item)
+        context = {'form': form}
+        return render(request, 'edit_item.html', context)
+
+    
 
 # Code for Like functionality
 
