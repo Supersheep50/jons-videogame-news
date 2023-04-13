@@ -83,8 +83,10 @@
                     </p>
 
                     {{ comment.body | linebreaks }}
+                    {% if request.user.is_authenticated and request.user.has_perm('JVN.change_comment') %}
+                    <button class="edit-comment-button" type="button">Edit</button>
+                    {% endif %}
                 </div>
-
                 {% endfor %}
             </div>
         </div>

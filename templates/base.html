@@ -103,14 +103,12 @@
 
     <!--JQuery-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!--Message alert fade and dismiss-->
     <script>
         $(document).ready(function () {
-            // After 5 seconds, hide the alert box
             setTimeout(function () {
                 $('.alert-msg').fadeOut('slow');
-            }, 5000); // 5000 milliseconds = 5 seconds
-
-            // Handle the close button click event
+            }, 5000);
             $('.alert-msg').on('click', '.close', function () {
                 $(this).parent().fadeOut('slow');
             });

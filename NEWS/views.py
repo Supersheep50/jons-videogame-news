@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.views.generic import (TemplateView)
 from django.http import HttpResponseRedirect
@@ -6,6 +6,8 @@ from .models import Post
 from .forms import CommentForm
 
 #News Artcile view
+
+
 class PostList(generic.ListView):
     model = Post
     queryset = Post.objects.filter(status=1).order_by('-created_on')
@@ -44,6 +46,9 @@ class PostDetail(View):
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
 
+        if 'edit_comment' in request.POST:
+            return self.edit_comment(request, request.POST['edit_comment'])
+
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
             comment_form.instance.email = request.user.email
@@ -65,6 +70,20 @@ class PostDetail(View):
                 "liked": liked
             },
         )
+
+    def edit_comment(self, request, comment_id):
+        comment = get_object_or_404(Comment, id=comment_id)
+
+        if request.method == 'POST':
+            form = CommentForm(request.POST, instance=comment)
+            if form.is_valid():
+                form.save()
+                messages.success(request, 'Your comment has been updated.')
+                return redirect('home')
+        else:
+            form = CommentForm(instance=comment)
+
+        return render(request, 'edit_comment.html', {'form': form, 'comment': comment})
 
 # Code for Like functionality
 
