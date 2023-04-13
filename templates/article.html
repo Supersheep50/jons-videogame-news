@@ -1,5 +1,6 @@
 {% extends 'base.html' %} {% block content %}
 {% load crispy_forms_tags %}
+
 <!--News post details-->
 <div class="masthead">
     <div class="container">
@@ -83,9 +84,11 @@
                     </p>
 
                     {{ comment.body | linebreaks }}
-                    {% if request.user.is_authenticated and request.user.has_perm('JVN.change_comment') %}
+
+                    {% if request.user.is_authenticated and request.user.has_perm('news.edit_comment') %}
                     <button class="edit-comment-button" type="button">Edit</button>
                     {% endif %}
+
                 </div>
                 {% endfor %}
             </div>
