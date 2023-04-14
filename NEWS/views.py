@@ -77,7 +77,7 @@ class PostDetail(View):
 
         form = ItemForm(instance=item)
         context = {'form': form}
-        return render(request, 'edit_item.html', context)
+        return render(request, 'NEWS/edit_item.html', context)
 
     
 

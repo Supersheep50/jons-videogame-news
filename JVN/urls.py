@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from contact import views as contact_views
-
+from NEWS.views import edit_item
 
 
 urlpatterns = [
@@ -25,7 +25,6 @@ urlpatterns = [
     path("", include("NEWS.urls"), name="NEWS_urls"),
     path("contact/", include('contact.urls')),
     path("accounts/", include("allauth.urls")),
-   
+    path('edit/<item_id>', edit_item, name='edit'),
  
-  
 ]

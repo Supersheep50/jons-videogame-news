@@ -1,23 +1,12 @@
-{% extends "base.html" %}
-
-{% load static %}
-{% block content %}
-
-
 <body>
-    <h1>Edit a Comment:</h1>
-    <form method="POST">
+    <h1>Edit a ToDo Item:</h1>
+    <form method="POST" action="add">
         {% csrf_token %}
         {{ form.as_p }}
         <div>
             <p>
-                <button type="submit">Update Comment</button>
+                <button type="submit">Update Item</button>
             </p>
         </div>
     </form>
 </body>
-
-
-
-
-{% endblock content %}
