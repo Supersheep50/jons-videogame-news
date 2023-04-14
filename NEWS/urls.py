@@ -1,5 +1,7 @@
 from . import views
+from .views import EditCommentView
 from django.urls import path
+
 
 
 urlpatterns = [
@@ -8,6 +10,6 @@ urlpatterns = [
     path('contact/', views.ContactPage.as_view(), name='contact'),
     path('<slug:slug>/', views.PostDetail.as_view(), name='post_detail'),
     path('like/<slug:slug>', views.PostLike.as_view(), name='post_like'),
-   
-
+    path('edit/<int:comment_id>', EditCommentView.as_view(), name='edit_comment'),
+    
 ]

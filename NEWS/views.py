@@ -2,8 +2,9 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.views.generic import (TemplateView)
 from django.http import HttpResponseRedirect
-from .models import Post
+from .models import Post, Comment
 from .forms import CommentForm
+
 
 #News Artcile view
 
@@ -67,20 +68,6 @@ class PostDetail(View):
             },
         )
 
-"""
-    def edit_item(request, item_id):
-        item = get_object_or_404(Item, id=item_id)
-        if request.method == 'POST':
-            form = ItemForm(request.POST, instance=item)
-        if form.is_valid():
-            form.save()
-            return redirect('edit_item')
-
-        form = ItemForm(instance=item)
-        context = {'form': form}
-        return render(request, 'NEWS/edit_item.html', context)
-
-"""    
 
 # Code for Like functionality
 
@@ -105,3 +92,21 @@ class AboutPage(TemplateView):
 class ContactPage(TemplateView):
 
     template_name = 'contact.html'
+
+
+class EditCommentView(View):
+    def get(self, request, comment_id):
+        comment = get_object_or_404(Comment, id=comment_id)
+        form = CommentForm(instance=comment)
+        context = {'form': form}
+        return render(request, 'edit_item.html', context)
+
+    def post(self, request, comment_id):
+        comment = get_object_or_404(Comment, id=comment_id)
+        form = CommentForm(request.POST, instance=comment)
+        if form.is_valid():
+            form.save()
+            return redirect('edit_comment', comment_id=id)
+
+        context = {'form': form}
+        return render(request, 'edit_item.html', context)

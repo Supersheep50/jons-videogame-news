@@ -1,20 +1,23 @@
 import unittest
 from django.test import TestCase
-from NEWS.models import Post
+from .models import Post
 
 
 class TestNewsPost(unittest.TestCase):
     pass
 
 
-unittest.main()
-
-
 class PostModelTest(TestCase):
+    
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        django.setup()
     
     def test_post_str(self):
         post = Post(title="Test Post")
         self.assertEqual(str(post), "Test Post")
 
 
-unittest.main()
+if __name__ == '__main__':
+    unittest.main()
