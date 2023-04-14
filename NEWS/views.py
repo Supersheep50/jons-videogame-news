@@ -67,6 +67,7 @@ class PostDetail(View):
             },
         )
 
+"""
     def edit_item(request, item_id):
         item = get_object_or_404(Item, id=item_id)
         if request.method == 'POST':
@@ -79,7 +80,7 @@ class PostDetail(View):
         context = {'form': form}
         return render(request, 'NEWS/edit_item.html', context)
 
-    
+"""    
 
 # Code for Like functionality
 
