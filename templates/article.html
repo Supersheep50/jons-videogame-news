@@ -84,10 +84,11 @@
                     </p>
 
                     {{ comment.body | linebreaks }}
-                    <a href="/edit/{{ comment.id }}">
-                        Edit
-                    </a>
-
+                    {% if user.username == comment.name %}
+                    <button><a href="/edit/{{ comment.id }}">
+                            Edit
+                        </a></button>
+                    {% endif %}
                 </div>
                 {% endfor %}
             </div>

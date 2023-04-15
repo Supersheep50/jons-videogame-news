@@ -3,7 +3,6 @@ from .views import EditCommentView
 from django.urls import path
 
 
-
 urlpatterns = [
     path('', views.PostList.as_view(), name='home'),
     path('about/', views.AboutPage.as_view(), name='about'),
