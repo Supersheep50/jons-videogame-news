@@ -1,293 +1,210 @@
-Credits for news articles
+# The-Secret-of-the-HLL-Tomb
 
-https://www.ign.com/articles/the-witcher-3-next-gen-update-hands-on-preview
+- The Secret of the HLL-Tomb is a text adventure video game based off of a Podcast I co-host with some friends. Players are required to navigate 3 seperate tombs and acquire 3 keys. These 3 keys are required to open a door at the end of the adventure and complete the game. In each tomb you will meet a stranger who will pose you a riddle, you must answer the riddle correctly to win the key or it's Game Over. 
 
-Bootstrap Template for compononents and ideas
+- The player has an inventory to carry the keys and there is also a logbook for users to enter in their names. This is then recorded in a connected Google Worksheet. The main menu lets users start a game, read the instructions or check out our podcast.
 
+- For many years now I have wanted to build a text adventure video game and I am absolutely delightied I got the chance to put my idea into action. I hope you enjoy!
 
+- *Be advised I originally had the text scroll speed to a much slower speed, to replicate someone typing. On advice of my mentor I have made it faster to make things easier for the assesor. 
 
+[Play the deployed version here!](https://the-secret-of-the-hll-tomb.herokuapp.com/)
 
+## Flowchart
 
+- I created a Flowchart to help plan out the basic journey of the game. This helped massively when designing the tombs and the route the player would take to get to the end of the game. It also helped with regards to user input validation. 
 
-# BookWorm -  Testing
+- I also found the flowchart helped with initially working out the functions I would be using and how many would be needed.
 
-![Bookworm](documentation/bookworm.png)
+- I did end up moving away from the original layout slightly. Adding in more decisions for the user, a logbook and the ability to explore each path without a Game Over.  
 
-Visit the deployed site: [Bookworm](https://bookworm2022.herokuapp.com/)
+![Flowchart](/documents/flowchart/Python%20Project%20.png)
 
-- - -
+## User Stories
 
-## CONTENTS
+  -   #### First Time Visitor Goals
 
-* [AUTOMATED TESTING](#automated-testing)
-  * [W3C Validator](#w3c-validator)
-  * [JavaScript Validator](#javascript-validator)
-  * [Python Validator](#python-validator)
-  * [Lighthouse](#lighthouse)
-  * [WAVE Testing](#wave-testing)
-* [MANUAL TESTING](#manual-testing)
-  * [Testing User Stories](#testing-user-stories)
-  * [Full Testing](#full-testing)
-* [BUGS](#bugs)
-  * [Solved Bugs](#solved-bugs)
-  * [Known Bugs](#known-bugs)
+      1. As a first time user I want to understand what is The Secret of the HLL Tomb. 
+      2. As a first time visitor I want to understand how to play The Secret of the HLL Tomb. 
+      3. As a first time user I want to understand how to start the game, check the instructions and also read up on the podcast.
+      4. As a first time visitor I want to try to beat the game and enter my name into the logbook.
 
-Testing was ongoing throughout the entire build. During development I made use of Google Chrome Developer Tools to ensure everything was working correctly and to assist with troubleshooting when things were not working as expected.
+  -   #### Returning Visitor Goals
 
-I have gone through each page using Google Chrome Developer Tools to ensure that each page is responsive on a variety of different screen sizes and devices.
+      1. As a returning visitor I want to explore the other directions of the game. 
+      2. As a returning visitor I want to try the other ending of the game. 
+      3. As a returning visitor I want to beat the game quicker than before.
 
-- - -
+  -   #### Frequent User Goals
+      1. As a frequent user I want to experience every multiple choice answer and direction in the game. 
+      2. As a frequent user I want to have my name in the logbook multiple times. 
 
-## AUTOMATED TESTING
+## Features
 
-### W3C Validator
+### Existing Features
 
-[W3C](https://validator.w3.org/) was used to validate the HTML on all pages of the website. It was also used to validate the CSS. I have checked the HTML via direct input and also by inspecting the page source and running this through the validator.
+- __Header__
 
-* [Index Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbookworm2022.herokuapp.com%2F) - No errors or warnings.
-* [Register Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbookworm2022.herokuapp.com%2Fregister) - No errors or warnings.
-* [Login Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbookworm2022.herokuapp.com%2Flogin) - No errors or warnings.
-* [Profile Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbookworm2022.herokuapp.com%2Fprofile%3Fusername%3Dadmin) - No errors or warnings.
-* [Bookshelves Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbookworm2022.herokuapp.com%2Fbookshelves) - No errors or warnings.
-* [Add Bookshelf Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbookworm2022.herokuapp.com%2Fadd_bookshelf) - No errors or warnings.
-* [Edit Bookshelf Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbookworm2022.herokuapp.com%2Fedit_bookshelf%2F23) - No errors or warnings.
-* [Search Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbookworm2022.herokuapp.com%2Fsearch) - No errors or warnings.
-* [Add Review Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbookworm2022.herokuapp.com%2Fpopulate_review%3Fgbook_id%3D7OdQvuI-eygC) - No errors or warnings.
-* [Books Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbookworm2022.herokuapp.com%2Fview_books) - No errors or warnings.
-* [Edit Review Page](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fbookworm2022.herokuapp.com%2Fedit_review%2F62e458bbbd1b8de864934262) - No errors or warnings.
-* [Error Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbookworm2022.herokuapp.com%2Fedit_bookshelf%2Ferror) - No errors or warnings.
+    - When the program first boots up you are greeted with a cyan coloured header that presents the name of the game. I chose a font that gave it a slightly creepy vibe. Below the header I have also included some brief text about the basics of the game. 
 
-~~The validator has returned warnings for the use of aria-labels on all pages using the bootstrap icons. I am happy to leave these warnings as I have followed the instructions on the bootstrap site regarding the use of aria labels with icons, and the use of the aria labels is important for accessibility.~~
+   ![Header](/documents/images/header.png)
 
-UPDATE Nov 2022 - aria-label warning: I have since been advised that the best way to deal with the issue of the aria-labels throwing a warning in the validator is to move the aria-label to the parent DOM element. I have now updated this for all aria-labels that were included in an `<i>` tag, and the warning no longer appears when validating.
+- __User creation__
 
-- - -
+    - Below the header and just after the game loads, the user is asked for their name and age. This creates a user profile for the game and is regularly mentioned throughout the game. 
+    
+    ![User creation](/documents/images/user-creation.png)
 
-### JavaScript Validator
+- __Main Menu__
 
-[jshint](https://jshint.com/) was used to validate the JavaScript.
+    - The main menu includes 3 options for the user to choose from. Entering 1 will start a new game for the player. Entering 2 will bring up the instructions for how to play the game and what to expect. Entering 3 will bring up information about the podcast the game is based off of. 
+    
+    ![Main menu](/documents/images/main-menu.png)
 
-* [script.js](documentation/testing/validation/jshint-script.png)
+- __Inventory__
 
-- - -
+    - The player has a bag with them that contains their inventory. This is where the 3 keys are stored as the game progresses.
+    
+    ![Inventory](/documents/images/inventory.png)
 
-### Python Validator
+- __Error Messages__
 
-~~[PEP8](http://pep8online.com/) was used to validate the python files. Due to limited time for completing this project I have been unable to completely fix all PEP8 errors in all the files, I need to do some further research into the best ways to break lines that are too long.~~
+    - Any time a user inputs a blank answer or an answer outside of the question parameters an error will show, and then repeat the question for the user. This validation is in place throughout the entire game regardless of the question or input asked.
 
-UPDATE Nov 2022: The PEP8 validator site mentioned above has since gone down. I am therefore relying on using the [pycodestyle](https://pypi.org/project/pycodestyle/) package within my IDE to ensure that my code meets PEP8 guidelines.
+    ![Error Messages](/documents/images/error-messages.png)
 
-* [app.py](documentation/testing/validation/python-app.png) - No errors or warnings.
-* [models.py](documentation/testing/validation/python-models.png) - No errors or warnings.
-* [__init__.py](documentation/testing/validation/python-init.png) - No errors or warnings.
-* [auth/routes.py](documentation/testing/validation/python-auth-routes.png) - Please see further information below regarding nomember error resolution. No other errors or warnings.
-* [books/routes.py](documentation/testing/validation/python-book-routes.png) - Please see further information below regarding nomember error resolution, and bare exception resolution. No other errors or warnings.
-* [error_handlers/routes.py](documentation/testing/validation/python-error-routes.png) - There is a [warning](documentation/testing/validation/error-route-pep8.png) regarding the argument `e` not being used. I tried removing this argument from the code, however the error pages then didn't load, they defaulted to the generic error pages. I have added back in the argument `e` to allow the error handling to work correctly and to display my own error pages to the user. I am therefore happy to leave this warning in place. Pylint also gives feedback that the argument `e` doesn't conform to snake_case naming style. Again I am happy to leave this feedback, as there is no way to snake_case name a singular letter.
-* [main/routes.py](documentation/testing/validation/python-main-routes.png) - No errors or warnings.
+- __Logbook__
 
-Nomember error resolution.
+    - I have included a logbook for users to sign their name as they near the end of the game. I connected the sheet to my code via a Google API.
 
-The auth and book routes.py files were both showing an error:
+    ![Logbook](/documents/images/logbook.png)
 
-``` bash
-Instance of 'scoped_session' has no 'add' memberpylint(no-member)
-```
+- __Google Sheet__
 
-Upon doing some research regarding this error I came across the following [solution](https://cs50.stackexchange.com/questions/32768/instance-of-scoped-session-has-no-commit-member), which also referenced this answer on [stackoverflow](https://stackoverflow.com/questions/42789666/pylint-error-message-on-cloud-9-cs50). It seems to be an issue with the way the pylinter reads the python file. Research suggested that I add the following code to a `.pylintrc` file to let the linter know to ignore this error: `ignored-classes=SQLObject,Registrant,scoped_session`.
+    - Screenshot of Google Sheet for the logbook
+   
+    ![Logbook](/documents/images/google-sheet.png)
 
-Bare exception resolution.
+- __Emojis__
 
-In the books/route.py file I was getting an error relating E722 no bare exceptions. I did some further research on this error and added Exeption after the except to solve this issue as mentioned in this [stackoverflow question](https://stackoverflow.com/questions/54948548/what-is-wrong-with-using-a-bare-except).
+    - Several different types of emojis are scattered throughout the game to add some visual style.
 
-I have also been able to run all my python files through the [Code Insitute Python Linter](https://pep8ci.herokuapp.com/) which they released to students on the 15th of November. It shows no errors in any of my python files.
-- - -
-
-### Lighthouse
-
-I used Lighthouse within the Chrome Developer Tools to test the performance, accessibility, best practices and SEO of the website. These scores are somewhat lower than what I would like them to be so this is something that I would prioritise improving in the next implementation.
-
-### Desktop Results
-
-* [Index Page](documentation/testing/validation/lh-index-desk.png)
-* [Add Bookshelf Page](documentation/testing/validation/lh-add-bookshelf-desk.png)
-* [Add Review Page](documentation/testing/validation/lh-add-review-desk.png)
-* [Books Page](documentation/testing/validation/lh-books-desk.png)
-* [Bookshelves Page](documentation/testing/validation/lh-bookshelves-desk.png)
-* [Edit Bookshelf Page](documentation/testing/validation/lh-edit-bookshelf-desk.png)
-* [Edit Review Page](documentation/testing/validation/lh-edit-review-desk.png)
-* [Error Page](documentation/testing/validation/lh-error-desk.png)
-* [Login Page](documentation/testing/validation/lh-login-desk.png)
-* [Profile Page](documentation/testing/validation/lh-profile-desk.png)
-* [Register Page](documentation/testing/validation/lh-register-desk.png)
-* [Search Page](documentation/testing/validation/lh-search-desk.png)
-
-- - -
-
-### WAVE Testing
-
-[WAVE](http://wave.webaim.org/) (Web Accessibility Evaluation Tool) allows developers to create content that is more accessible to users with disabilities. It does this by identifying accessibility and WGAC errors.
-
-I have used the WAVE testing tool to try and ensure there are no accessibility issues with my site.
-
-- - -
-
-## MANUAL TESTING
-
-### Testing User Stories
-
-| Goals | How are they achieved? | Image |
-| :--- | :--- | :--- |
-| `First Time Visitors` |
-|  |  |  |
-| Understand what the site is for and how to navigate the site. | A description of what the site is is included on the home page. | :--- |
-| Register for an account. | The description on the home page encourages new users to register for an account. A register link is displayed on the navbar if a user is not logged in. | :--- |
-| Search for books | Users are always shown the search link on the navbar regardless of their login status. | :--- |
-|`Returning Visitors`|
-|  |  |  |
-| Log in to my account | If a user is not logged into an account, a login link is provided on the navbar. | :--- |
-| Create a bookshelf | The create a bookshelf button is displayed prominently at the top of the bookshelves page. | :--- |
-| Edit a bookshelf | When a user views their bookshelves on the bookshelves page, they are given the option to edit their bookshelf. | :--- |
-| Delete a bookshelf | When a user views their bookshelves on the bookshelves page, they are given the option to delete their bookshelf. When the user selects delete, a modal will pop up to confirm deletion and to let the user know that all books shelved on that bookshelf will also be deleted. | :--- |
-| Create a book review | When a user searches for a book, they are shown the results of the search and each result has a shelve this book button. When the user clicks on this they are redirected to the review page. | :--- |
-| Edit a book review | When a user views their books, each book has an edit button, which will take the user to the edit review page with the books information pre-populated. | :--- |
-| Delete a book review | When a user views their books, each book has a delete button, when the user clicks this a modal will pop up to confirm the user wishes to delete the book. | :--- |
-|`Admin User` |
-|  |  |  |
-| Remove any reviews that are offensive | Due to time constraints, I have had to place this item in the future implementations list. |  |
-
-- - -
-
-### Full Testing
-
-Full testing was performed on the following devices:
-
-* Laptop:
-  * Macbook Pro 2021 14 inch screen
-* Mobile Devices:
-  * iPhone 13 pro.
-  * iPhone 11 pro.
-  * Phone X.
-
-Each device tested the site using the following browsers:
-
-* Google Chrome
-* Safari
-* Firefox
-
-Additional testing was taken by friends and family on a variety of devices and screen sizes. A Big thank you to [Megan](https://github.com/Medusas71) for taking the time to thoroughly test the site for me.
-
-| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
-| --- | --- | --- | --- | --- |
-| `Navbar` |
-|  |  |  |  |  |
-| Bookworm Logo & Title | When clicked the user will be redirected to the home page. | Clicked Logo and title | Redirected to the home page. | Pass |
-| Home Page Link | When clicked the user will be redirected to the home page.| Clicked link | Redirected to the home page. | Pass |
-| Search Link | When clicked the user will be redirected to the search page. | Clicked link | Redirected to the search page. | Pass |
-| Bookshelves Link (Logged in users only) | When clicked the user will be redirected to the bookshelves page. | Clicked link | Redirected to the bookshelves page | Pass |
-| Books Link (Logged in users only) | When clicked the user will be redirected to the books page. | Clicked link | Redirected to the books page | Pass |
-| Profile Link (Logged in users only) | When clicked the user will be redirected to the profile page. | Clicked link | Redirected to the profile page | Pass |
-| Log in Link (Only shown if user not in session) | When clicked the user will be redirected to the log in page. | Clicked link | Redirected to the log in page | Pass |
-| Register Link (Only shown if user not in session) | When clicked the user will be redirected to the register page. | Clicked link | Redirected to the register page  | Pass |
-| Log out Link (Logged in users only) | When clicked the user will be redirected to the home page and a flash message displayed to let the user know they have been logged out successfully. | Clicked link |Redirected to the home page and a flash message displayed to let me know I have been logged out | Pass |
-| `Footer` |
-|  |  |  |  |  |
-| Bookworm Title | When clicked the user will be redirected to the home page. | Clicked Logo and title | Redirected to the home page. | Pass |
-| Copyright year | The copyright should display the correct year - this is a javascript function that checks what the current year is and injects it into the footer | Checked the year | Displaying the correct year | Pass |
-| `Home Page` |
-|   |   |   |   |
-| Register link in the blurb | When clicked the user will be redirected to the register page. | Clicked link  | Redirected to the register page | Pass |
-| Search link in the blurb | When clicked the user will be redirected to the search page. | Clicked link | Redirected to search page | Pass |
-| `Log in Page` |
-| Username input - empty | This is a required field so the form should not submit if empty | Tried to submit the form with this field empty | Tooltip tells me this field is required | Pass |
-| Password input empty | This is a required field so the form should not submit if empty | Tried to submit the form with this field empty | tooltip tells me this field is required |  Pass |
-| log in button | Saves the user to session and redirects to the profile page. Flash message shown welcoming the user | Submitted form | Redirected to the profile page and flash message shown | Pass |
-| Incorrect username or password used | A flash message should display saying username/password incorrect - this is defensive programming - not letting user know which input is incorrect | Incorrect username/password entered | Message flashes to let the user know they have entered an incorrect username/password | Pass |
-| Link to register page |  This should redirect the user to the register page | Clicked link | Redirected to the register page | Pass |
-| `Register Page` |
-| | | | | | |
-| Username input | The username should be 5 characters minimum | Entered username less than 5 characters long | tooltip lets the user know they have not entered enough characters | Pass |
-| Username input - empty | The username is a required field, so should not submit with no value | Tried to submit form with no value entered | Tooltip lets user know this value is required | Pass |
-| Username input | If username is in use, message should flash to user | entered an in use username | Message flashed to say username already in use | Pass|
-| Email input | The email input should include an email address  | Entered plain text | Tooltip tells user to use an email address here | Pass |
-| Email input - empty | The email is a required field, so should not submit with no value | Tried to submit form with no value entered | Tooltip lets user know this value is required | Pass |
-| Password input | This field should be at least 5 characters long | Entered password less than 5 characters long | Tooltip tells user the password should be at least 5 characters long | Pass |
-| Password input - empty | The password is a required field, so should not submit with no value | Tried to submit form with no value entered | Tooltip lets user know this value is required | Pass |
-| Register button | Should redirect user to the log in page and a registration successful message flashed | Created new user and submitted form | Redirected to the log in page and message flashed | Pass |
-| `Search Page` |
-|   |   |   |   |  |
-| Search feature | A search is performed when the user enters a search term | Searched for rabbits | The search returns book results | Pass |
-| Search feature. - Error | If there is an error with the search, a flash message is displayed to let the user know there was a problem and directs them to try again. | Searched for bulldogs | The search doesn't return a result (please see known bugs No 2), and a flash message is displayed to the user | Pass |
-| Shelve this book button on search result book (user signed in) | When the user clicks the shelve this book button they should be redirected to the add review page | Clicked button while signed in | Redirected to the add review page and book information pre-populated | Pass |
-| Shelve this book button on search result book (user not signed in) | When the user clicks the shelve this book button they should be flashed a message to let them know they need to be logged in to shelve a book and be redirected to the log in page | Clicked button while not signed in | Redirected to the log in page and flash message displayed | Pass |
-| `Bookshelves Page` |
-|   |   |   |   |  |
-| Add a bookshelf button | When the user clicks this button they should be taken to the add a bookshelf page | Clicked button | Redirected to the add a bookshelf page | Pass |
-| Bookshelf accordion | When the user selects a bookshelf, the accordion opens to display the edit and delete bookshelf buttons | Clicked shelf | Accordion opened to display edit and delete buttons | Pass |
-| Edit bookshelf button on bookshelf accordion | The user should be taken to the edit bookshelf page with the selected bookshelf pre-populated in the input | Clicked button | Taken to the edit bookshelf page. Input pre-populated with the current bookshelf name | Pass |
-| Delete button on bookshelf accordion | When the user clicks the delete button a modal should pop up asking the user to confirm they wish to delete the bookshelf and that by deleting the bookshelf all books associated with the shelf will be deleted too | Clicked button | Modal popped up and displayed the confirm deletion message | Pass |
-| Delete Button on Deletion modal| When the user clicks the delete button the bookshelf should be deleted along with any books that were associated with the shelf. A flash message will confirm deletion and the user is redirected to the bookshelves page | Clicked button | Bookshelf deleted together with associated books and a flash message displayed success. Redirected to the bookshelves page | Pass |
-| Cancel button on deletion modal | When the user clicks the cancel button the modal should close | Clicked button | Modal closed | Pass |
-| `Books Page` |
-|   |   |   |   |  |
-| Accordion button | Open/close the accordion | Click button | Accordion opens and closes | Pass |
-| Edit button on book | When the edit button is clicked the user should be taken to the edit review page with the inputs pre-populated with the values stored in the database for that book | Clicked button | Redirected to the edit review page. Books details filled in with previously saved information | Pass |
-| Delete button on book | When the user clicks this button a modal should pop up asking the user to confirm they wish to delete this book | Clicked button | Modal popped up to confirm if I wanted to delete the book | Pass |
-| Delete button on modal | When clicked the book should be deleted | Clicked button | Book Deleted from books page | Pass |
-| Cancel button on modal | When clicked the modal should close | Clicked button | Modal closed | Pass |
-| `Add Bookshelf Page` |
-| Bookshelf input | Should prompt the user to enter a shelf name if left blank | Left blank and clicked add bookshelf button | Tooltip tells you this field needs to be filled in | Pass |
-| Add Bookshelf button | Saves the new bookshelf to the database, redirects the user to the bookshelves page and flashes message to let the user know successful | Clicked button | Bookshelf saved to the database, redirected to the bookshelves page and flash message to save bookshelf created successfully | Pass |
-| `Edit Bookshelf Page` |
-| Input | This should be pre-populated with the bookshelf selected | Checked input against the bookshelf selected |Input pre-populated with the bookshelf selected | Pass |
-| Input - no value entered | The form requires this field be filled in before submission | Left input blank | Tooltip lets me know this field is required | Pass |
-| Edit bookshelf button | When clicked the updated shelf name should be saved to the database, the user redirected to the bookshelves page and a message flashed to let them know updated successfully | clicked button | Updated bookshelf name added to the database, redirected to bookshelf page and flash message shows update has been successful | Pass |
-| `Add Review Page` |
-|   |   |   |   |   |
-| Title input | This is a required field so should ask for a value to be entered if empty. This field should be pre-populated with the book information selected in the search | Input was pre-populated. Cleared the input | Tooltip told me it is a required field | Pass |
-| Author input | This is a required field so should ask for a value to be entered if empty. This field should be pre-populated with the book information selected in the search | Input was pre-populated. Cleared the input | Tooltip told me it is a required field | Pass |
-| Bookshelf dropdown | This should be populated with all the bookshelves associated with the user | Checked to see if all my created bookshelves were displayed | Only my bookshelves are displayed | Pass |
-| Star Ratings | These should be able to be selected to choose your rating | clicked random ratings | The rating was saved to the database | Pass |
-| Review Field | This is an optional field. Any information entered should be saved to the database | Text entered | Text saved to the database | Pass |
-| Notes Field | This is an optional field. Any information entered should be saved to the database | Text entered | Text saved to the database | Pass |
-| Add Review Button | This should add the review to the database and redirect the user to the books page and flash a message to let the user know the book was saved successfully | Clicked button | Review saved to database and redirected to books page, message flashed to let me know book saved successfully | Pass |
-| `Edit Review Page` |
-| Title input | This is a required field so should ask for a value to be entered if empty. This field should be pre-populated with the book information saved to the database | Input was pre-populated. Cleared the input | Tooltip told me it is a required field | Pass |
-| Author input | This is a required field so should ask for a value to be entered if empty. This field should be pre-populated with the book information saved to the database | Input was pre-populated. Cleared the input | Tooltip told me it is a required field | Pass |
-| Bookshelf dropdown | This should be populated with all the bookshelves associated with the user | Checked to see if all my created bookshelves were displayed | Only my bookshelves are displayed | Pass |
-| Star Ratings | These should be able to be selected to choose your rating. Rating saved to the database should be displayed | Rating saved to the database displayed. Clicked random rating to change the rating | The rating was saved to the database | Pass |
-| Review Field | This is an optional field. Previously saved review should display here. Any information entered should be saved to the database | Saved review text displayed. Text Changed | Text saved to the database | Pass |
-| Notes Field | This is an optional field. Previous saved notes should display here. Any information entered should be saved to the database | Notes previously saved to the database displayed, text changed | Text saved to the database | Pass |
-| Edit Review Button | This should add the updated review to the database and redirect the user to the books page and flash a message to let the user know the book was saved successfully | Clicked button | Review saved to database and redirected to books page, message flashed to let me know book saved successfully | Pass |
-| `Error Page` |
-|   |   |   |   |   |
-| Home page link | Redirects the user to the home page | Clicked link | Redirected to home page | Pass |
-
- - - -
-
-## BUGS
-
-### Solved Bugs
-
-| No | Bug | How I solved the issue |
-| :--- | :--- | :--- |
-| 1 | When I added the accordion to the book search results, the accordion would open and close on all books together when triggered due to the accordion being created in the for loop, the id was identical for all results. | To enable each accordion to open and close individually I needed to find a way to create a unique ID on every iteration of the for loop. Initially I considered taking the title and using the python method replace to remove any spaces in the title. However this would have been a problem if there were two books with identical names. I posed my question on slack and Daisy suggested using a loop.counter. On researching this I discovered it is only applicable to Django, however something very similar exists in Jinja - a loop.index. By using the loop.index in the id attribute I was able to create a unique ID for each book and this allowed the accordion to be opened and closed on each book individually.  |
-| 2 | The bootstrap modal for deleting a bookshelf was displaying but was hidden under the backdrop, making it impossible to use the modal buttons or to exit out of the modal. ![Modal Bug](documentation/testing/modal-bug.png) | I initially tried moving the modal code within the file but this made no difference. Upon searching google for bootstrap modal greyed out I found the following [article](https://weblog.west-wind.com/posts/2016/Sep/14/Bootstrap-Modal-Dialog-showing-under-Modal-Background?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+RickStrahl+%28Rick+Strahl%27s+WebLog%29). I tried a few of the fixes, which didn't work before finding that the fix to remove the backdrop did work. This is not an ideal fix, but works for the moment until I can research this issue further and find a more elegant solution. |
-| 3 | Users could try to view the bookshelves page by entering the URL for the bookshelves page whilst not logged in and would be presented with a keyerror page. This was not a great user experience as it did not display any information that would be useful to a user as to what the issue was. | Upon checking my routes for the bookshelves page, I found that I had not included any defensive programming to prevent a user from trying to view the bookshelves page without being logged in. I have Added the logic to check whether a user is in session, and if not to present a flash message. This provides the user with a better overall experience on the site and provides them with some useful feedback - letting the user know they need to be logged in to view their bookshelves and then redirecting them to the log in page. |
-| 4 | Users could try to view the books page by entering the URL for the books page whilst not logged in and would be presented with a keyerror page. This was not a great user experience as it did not display any information that would be useful to the user as to what the issue was. | Upon checking my view_books route, I found that I had not included any defensive programming that would prevent a user from accessing the page without being logged in. I have added the logic to check whether the user is in session, and if not to present a flash message. This provides the user with a better overall experience on the site and provides them with some useful feedback - letting the user know they need to be logged in to view the books page and redirecting them to the log in page. |
-| 5 | No user feedback when user enters a bookshelf name already in use | I had originally created this columns in the database to be a unique field. As I thought that a user wouldn't want to have two bookshelves with the same name. This then raised the issue that the bookshelf name could only be used once by anyone - so two users couldn't create a to be read shelf. This was not a great user experience, and I could either change it so that the column wouldn't be unique, or I could just handle the error by flashing an error message to the user telling them this bookshelf name was already taken. I decided that it would be a better user experience to allow all users to be able to make a shelf with the same name. I made the changes to my models.py and migrated these changes using flask migrate. I then pushed these changes to GitHub and ran the migrations in the heroku console. Unfortunately, the migrations were not being deployed to the live site, despite them working on the local version of the site. I performed a lot of research on slack and google, spoke to peers about the problem, referred back to the lesson material and eventually contacted tutor support regarding the issue. Tutor support recommended that if I had pushed my changes to GitHub and they were still not being picked up by Heroku after running the migration, it was most likely that they was some issue with my data in the database and I would have to reset my postgres database, and run migrations again. As I had tried all other suggestions without any success, I have had to reset the databases for users and bookshelves in order to make the migrations to the live site. I have tested this on the live site and users can now create the same bookshelf more than once, which means that several users can use the same name for their bookshelves. |
-| 6 | The star ratings seem to be misaligned since the app has been deployed. ![Stars alignment](documentation/testing/stars-alignment.png)| I went back and looked at the original code snippet used to create this effect and noticed that they were using the star whereas I was using a bootstrap icon on the page for the blank star, but not for the css fill. By changing the blank star shown on the page to the star rather than a bootstrap icon I was able to solve the issue of the hover effect not lining up correctly. |
-| 7 | If a user tries to save a book with no authors listed in the google books API, an error occurs when they try to save that book to a bookshelf. ![No author error](documentation/testing/no-author-error.png) | I decided the best way to deal with this problem would be to use a ternary condition for the author in the dictionary created of the books information to be pre-populated to the form. If there was no author listed on the book, a blank string would be used, else the authors details from the API call would be used. |
-| 8 | Despite having my debug=False in my heroku vars, I was still having error tracing show on the deployed site. | [Suzy](https://github.com/suzybee1987) let me know that this is due to the fact that heroku vars are read as a string, so therefore it is actually reading it as true. This issue has been solved by removing this variable from my config vars in heroku. |
-
-- - -
-
-### Known Bugs
-
-| No | Bug | |
-| :--- | :--- | :--- |
-| 1 | When performing searches using the google books API, sometimes it is not returning a result, which results in a flash message being shown. I have noted that during development the API was returning results for certain terms, but when deployed these search terms would not return a result. I plan to look further into this issue as to why it is not returning a result and see if there is a way to filter out book results that are missing attributes. | |
-| 2 | Some books when shelved are pulling in a different book than the one selected. I have taken the unique volume ID and performed a check on the google books page and the ID is correct for the book selected, so there would appear to be an issue with the request to the API. This is something that I will need to look into further to discover why it is returning the wrong information. | ![Wrong book being populated](documentation/testing/wrong-book-populated.gif) |
-| 3 | During development I used many search terms to test the search function of the site. However I have found that on deployment some of the search terms that returned a result in development are not returning a result and so are showing the flash message to the user. This is something that I will need to look into further as I know that the search returns a result. I feel that perhaps it may be because some books may be missing parameters. | |
-| 4 | The buttons on the accordion are not aligned to the bottom of the footer. I would like to adjust this so that the buttons on all book results line up at the bottom of the footer. | ![Buttons not aligned](documentation/testing/buttons-align.png) |
-| 5 | When opening an accordion on a book, the other books on the same row also expand showing whitespace. I would like to change this so that only the book being opened expands. | ![Accordion issue](documentation/testing/accordion-issue.gif) |
-| 6 | I tried to add defensive programming to the profile page to prevent anyone from being able to view that page unless signed in by using similar defensive programming used throughout the project (if 'user' not in session). This worked fine in local development, however once I deployed to the live site, I couln't complete log in and access the profile page as I would hit a 500 error instead. I have reverted the code by removing the defensive programming from the profile route for now, so that users may log in and use the site, however I am aware of the issue and that this will need some additional work to get the defensive programming working. For the moment there is nothing sensitive on the profile page, and I have tested and checked that despite this page being available to a user who is not signed in, they are not able to access anything else on the site specific to a user. |
+    ![Emojis](/documents/images/emojis.png)
+
+ - __Coloured Text__
+
+    - Each character in the story has a different colour for the text they use. I did this by importing several different types of colour. All are accessible.
+
+     ![Coloured Text](/documents/images/coloured-text.png)
+
+- __Multiple choice Questions__
+
+    - For each of the riddles players have 3 possible answers they can give. Giving a right answer lets them progress while getting a wrong answer is Game Over. If something else other than one of the 3 answers is entered, the game will validate and ask the question again.
+    
+    ![Multiple choice Questions](/documents/images/multiple-choice.png)
+
+- __Game Over__
+
+    - If a user gets one of the riddles wrong, it will be Game Over. Like text adventures of the past, I included this to boost replayability. Players will be given the option to Try Again or return to the Main Menu.
+    
+    ![Game Over](/documents/images/game-over.png)
+
+- __Try Again__
+
+    - When a player gets a riddle wrong, they will be offered the chance to Try Again. Saying Yes will cause the game to restart while saying No will go back to the main menu.
+    
+    ![Try Again](/documents/images/try-again.png) 
+
+- __Features left to implement__
+
+    - I would love to add some music to the game to add to the atmosphere. Right now there is no music of any kind in the game. 
+    - Sadly due to time constraints I was not able to add a weapon system to the game. In the future I would like to add the ability to fight monsters. 
+    - For repeat playthroughs I would like to add the ability to gain xp. 
+    - I do hope to work on the game again at a later stage and add it to the HLL website. 
+
+### Refactoring
+
+- __Refactored User Profile code__
+
+    - Originally the user would enter their name at the beginning of the game but it would not create a user profile to store the data for the entirety of the game. I decided to make use of some OOP and add the ability to create a user and then also validate the users name and age. Validating that there was no blank spaces proved particualrly tricky. 
+
+    ![Refactored Code](/documents/images/user-refactored.png) 
+
+## Testing 
+
+- Please see the [Testing file](testing.md) for manual & validator testing.
+
+## Deployment
+
+### Local Deployment
+​
+*Gitpod* IDE was used to write the code for this project.
+
+To make a local copy of this repository, you can clone the project by typing the follow into your IDE terminal:
+- `git clone https://supersheep5-thesecretof-31lde9cg21c.ws-eu83.gitpod.io`
+
+Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://supersheep5-thesecretof-31lde9cg21c.ws-eu83.gitpod.io)
+​
+### Heroku Deployment
+​
+This project uses [Heroku](https://www.heroku.com), a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
+​
+Deployment steps are as follows, after account setup:
+​
+- Select *New* in the top-right corner of your Heroku Dashboard, and select *Create new app* from the dropdown menu.
+- Enter a name for your app. The app name must be unique, so you need to adjust the name until you find a name that hasn't been used.
+- From the dropdown, choose the region closest to you (EU or USA), and finally, select *Create App*.
+- From the new app *Settings*, click *Reveal Config Vars*, and set the value of KEY to `PORT`, and the value to `8000` then select *add*.
+- Now, add a seecond Config Var for the `creds.json`file, which contains the API Key from Google Sheets. Set the value of KEY to `CREDS` and paste the entire contents of `creds.json` in the VALUE box. Select *add*.
+- Further down, to support dependencies, select *Add buildpack*.
+- The order of the buildpacks is important. Select `Python` first, then *Save changes*. Click *Add buildpack* again, and select `Node.js`, then *Save changes*. If they are not in this order, you can drag them to rearrange them
+
+Heroku needs two additional files in order to deploy properly.
+- requirements.txt
+- Procfile
+
+You can install this project's requirements (where applicable) using: `pip3 install -r requirements.txt`. If you have your own packages that have been installed, then the requirements file needs to be updated using: `pip3 freeze --local > requirements.txt`
+
+The Procfile can be created with the following command: `echo web: node index.js > Procfile`
+
+For Heroku deployment, follow these steps to connect your GitHub repository to the newly created app:
+​
+- At the top of the screen on Heroku, select *Deploy*.
+- Next to *Deployment method* select *GitHub*, then scroll down and click *Connect to GitHub* to confirm you want to connect.
+- In the *repo-name* field, search for the name of the GitHub repository to deploy, and click *Search*.
+- Click *Connect* to link the GitHub repository with Heroku. 
+- Scroll down to the *Manual deploy* section, and click *Deploy Branch*.
+- If you like, click *Enable Automatic Deploys* in the *Automatic deploys* section to have Heroku rebuild your app every time you push a new change to GitHub.
+
+The frontend terminal should now be connected and deployed to Heroku.
+
+## Credits 
+
+### Media
+- [Patorjk.com](https://patorjk.com/) was used to create the heading.
+
+- Emojis used from [Unicode.com](https://unicode.org/emoji/charts/full-emoji-list.html)
+
+### Content 
+- I used Code Institute's Love Sandwiches Walkthrough ([repo here](https://github.com/Code-Institute-Solutions/love-sandwiches-p5-sourcecode/tree/master/05-deployment/01-deployment-part-1)) for guidance with code structure, linking my program to Google Sheets using an API, and deployment steps.
+
+- For slower printing to the terminal I used Stackoverflow. The page is [here](https://stackoverflow.com/questions/510348/how-do-i-make-a-time-delay) 
+
+- To change the color of the text I used ANSI color. Page from Stackoverflow helping it explain it to me found [here](https://stackoverflow.com/questions/4842424/list-of-ansi-color-escape-sequences)
+
+- For the add inventory function I used this video to help me form the basics of what I needed [here](https://www.youtube.com/watch?v=rvKxC-p6kbg)
+
+- Code to help validate the user input [here](https://initialcommit.com/blog/python-isalpha-string-method) and two seperate sessions with Tutor Support.
+
+- To create the ability to move from tomb to tomb I referenced this page [here](https://www.makeuseof.com/python-text-adventure-game-create/)
+
+- Used Love Sandwiches walkthrough to build out collecting data for the logbook.
+
+- To clear the screen after the user selects Try Again, I referenced this page [here](https://stackoverflow.com/questions/4810537/how-to-clear-the-screen-in-python)
+
+
+## Acknowledgements 
+
+- Big shout out to my partner Stephanie for all her help and wisdom! Thanks to tutor support for helping on a couple of issues and to my mentor AJ for the guidance.
