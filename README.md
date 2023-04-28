@@ -1,53 +1,45 @@
-# The-Secret-of-the-HLL-Tomb
+# Jons-Videogame-News
 
-- The Secret of the HLL-Tomb is a text adventure video game based off of a Podcast I co-host with some friends. Players are required to navigate 3 seperate tombs and acquire 3 keys. These 3 keys are required to open a door at the end of the adventure and complete the game. In each tomb you will meet a stranger who will pose you a riddle, you must answer the riddle correctly to win the key or it's Game Over. 
+- Jons Videogame News is a news website that reports on all the latest and greatest videogame news. The website gives readers the ability to keep up to date on videogame news and read news articles that the writers have written. 
 
-- The player has an inventory to carry the keys and there is also a logbook for users to enter in their names. This is then recorded in a connected Google Worksheet. The main menu lets users start a game, read the instructions or check out our podcast.
+- Readers have the ability to write, edit and delete comments on news stories. They can also like comments from other users.
 
-- For many years now I have wanted to build a text adventure video game and I am absolutely delightied I got the chance to put my idea into action. I hope you enjoy!
+[View the deployed version here!](https://jvn.herokuapp.com/)
 
-- *Be advised I originally had the text scroll speed to a much slower speed, to replicate someone typing. On advice of my mentor I have made it faster to make things easier for the assesor. 
+## Wireframes
 
-[Play the deployed version here!](https://the-secret-of-the-hll-tomb.herokuapp.com/)
+- I created a wireframe to map out the basic style and functionality of the website. 
 
-## Flowchart
-
-- I created a Flowchart to help plan out the basic journey of the game. This helped massively when designing the tombs and the route the player would take to get to the end of the game. It also helped with regards to user input validation. 
-
-- I also found the flowchart helped with initially working out the functions I would be using and how many would be needed.
-
-- I did end up moving away from the original layout slightly. Adding in more decisions for the user, a logbook and the ability to explore each path without a Game Over.  
-
-![Flowchart](/documents/flowchart/Python%20Project%20.png)
+![Website](/static/images/JVN-Wireframes.pdf)
 
 ## User Stories
 
   -   #### First Time Visitor Goals
 
-      1. As a first time user I want to understand what is The Secret of the HLL Tomb. 
-      2. As a first time visitor I want to understand how to play The Secret of the HLL Tomb. 
-      3. As a first time user I want to understand how to start the game, check the instructions and also read up on the podcast.
+      1. As a first time user I want to understand what is JVN.
+      2. As a first time visitor I want to understand how to navigate JVN. 
+      3. As a first time user I want to understand how to read news articles, like comments, read, edit and delete comments.
       4. As a first time visitor I want to try to beat the game and enter my name into the logbook.
 
   -   #### Returning Visitor Goals
 
-      1. As a returning visitor I want to explore the other directions of the game. 
-      2. As a returning visitor I want to try the other ending of the game. 
-      3. As a returning visitor I want to beat the game quicker than before.
+      1. As a returning visitor I want to see new news artciles. 
+      2. As a returning visitor I want to see what new comments are there. 
+      3. As a returning visitor I want to see if people have liked or reacted to my comments.
 
   -   #### Frequent User Goals
-      1. As a frequent user I want to experience every multiple choice answer and direction in the game. 
-      2. As a frequent user I want to have my name in the logbook multiple times. 
+      1. As a frequent user I want to build relationships on the website through the ability to comment.
+      2. As a frequent user I want to be able to check the website daily for new news articles and comments.
 
 ## Features
 
 ### Existing Features
 
-- __Header__
+- __Logo and Nav Header__
 
-    - When the program first boots up you are greeted with a cyan coloured header that presents the name of the game. I chose a font that gave it a slightly creepy vibe. Below the header I have also included some brief text about the basics of the game. 
+    - At the top left of the screen there is a custom made logo for the news wesbite. Clicking the logo brings you to the homepage. The logo scales with different devices.
 
-   ![Header](/documents/images/header.png)
+   ![Logo and Nav Header](/static/images/logo-navbar.png)
 
 - __User creation__
 
