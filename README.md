@@ -1,3 +1,6 @@
+![Responsive](/static/images/responsive-image.jpg)
+
+
 # Jons-Videogame-News
 
 - Jons Videogame News is a news website that reports on all the latest and greatest videogame news. The website gives readers the ability to keep up to date on videogame news and read news articles that the writers have written. 
@@ -10,7 +13,7 @@
 
 - I created a wireframe to map out the basic style and functionality of the website. 
 
-![Website](/static/images/JVN-Wireframes.pdf)
+![Website](/static/images/wireframes-image.png)
 
 ## User Stories
 
@@ -41,35 +44,35 @@
 
    ![Logo and Nav Header](/static/images/logo-navbar.png)
 
-- __User creation__
+- __Register & Login__
 
-    - Below the header and just after the game loads, the user is asked for their name and age. This creates a user profile for the game and is regularly mentioned throughout the game. 
+    - At the top right of the screen users have the ability to register with the website and then login or logout upon visiting the website. 
     
-    ![User creation](/documents/images/user-creation.png)
+    ![User creation](/static/images/register-login-image.jpg)
 
-- __Main Menu__
+- __Login/Log out Alert__
 
-    - The main menu includes 3 options for the user to choose from. Entering 1 will start a new game for the player. Entering 2 will bring up the instructions for how to play the game and what to expect. Entering 3 will bring up information about the podcast the game is based off of. 
+    - Each time a user logins or logs out a message alert flashes to tell they have been successful in doing so.
     
-    ![Main menu](/documents/images/main-menu.png)
+    ![Login/Log out Alert](/static/images/login-alert.jpg)
 
-- __Inventory__
+- __News Articles__
 
-    - The player has a bag with them that contains their inventory. This is where the 3 keys are stored as the game progresses.
+    - At the centre of the screen is where users will find all the news articles posted to the site.
     
-    ![Inventory](/documents/images/inventory.png)
+    ![News Artciles](/static/images/news-articles-image.jpg)
 
-- __Error Messages__
+- __Contact Section__
 
-    - Any time a user inputs a blank answer or an answer outside of the question parameters an error will show, and then repeat the question for the user. This validation is in place throughout the entire game regardless of the question or input asked.
+    - At the top right of the screen is a link for users to contact the admins of the website with any questions/concerns they may have.
 
-    ![Error Messages](/documents/images/error-messages.png)
+    ![Contact Section](/static/images/contact-image.jpg)
 
-- __Logbook__
+- __Register Section__
 
-    - I have included a logbook for users to sign their name as they near the end of the game. I connected the sheet to my code via a Google API.
+    - At the top right of the website users can register with the webiste so that they write and like comments.
 
-    ![Logbook](/documents/images/logbook.png)
+    ![Register Section](/static/images/register-section.jpg)
 
 - __Google Sheet__
 
