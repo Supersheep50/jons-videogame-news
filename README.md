@@ -74,48 +74,30 @@
 
     ![Register Section](/static/images/register-section.jpg)
 
-- __Google Sheet__
+- __Social Links__
 
     - Screenshot of Google Sheet for the logbook
    
-    ![Logbook](/documents/images/google-sheet.png)
+    ![Social Links](/static/images/social-links.jpg)
 
-- __Emojis__
+- __Post Comments__
 
-    - Several different types of emojis are scattered throughout the game to add some visual style.
+    - Logged in Users are able to post comments on news articles.
 
-    ![Emojis](/documents/images/emojis.png)
+    ![Post Comments](/static/images/post-comment-image.jpg)
 
- - __Coloured Text__
+ - __Edit & Delete Comments__
 
-    - Each character in the story has a different colour for the text they use. I did this by importing several different types of colour. All are accessible.
+    - Users are able to edit and delete teir comments. 
 
-     ![Coloured Text](/documents/images/coloured-text.png)
+     ![Edit & Delete Comments]()
 
-- __Multiple choice Questions__
+- __Like and Unlike Comments__
 
-    - For each of the riddles players have 3 possible answers they can give. Giving a right answer lets them progress while getting a wrong answer is Game Over. If something else other than one of the 3 answers is entered, the game will validate and ask the question again.
-    
-    ![Multiple choice Questions](/documents/images/multiple-choice.png)
+    - Users are able to like and unlike posts once they are logged in.
 
-- __Game Over__
+    ![Like and Unlike Comments](/static/images/like-posts-image.jpg)
 
-    - If a user gets one of the riddles wrong, it will be Game Over. Like text adventures of the past, I included this to boost replayability. Players will be given the option to Try Again or return to the Main Menu.
-    
-    ![Game Over](/documents/images/game-over.png)
-
-- __Try Again__
-
-    - When a player gets a riddle wrong, they will be offered the chance to Try Again. Saying Yes will cause the game to restart while saying No will go back to the main menu.
-    
-    ![Try Again](/documents/images/try-again.png) 
-
-- __Features left to implement__
-
-    - I would love to add some music to the game to add to the atmosphere. Right now there is no music of any kind in the game. 
-    - Sadly due to time constraints I was not able to add a weapon system to the game. In the future I would like to add the ability to fight monsters. 
-    - For repeat playthroughs I would like to add the ability to gain xp. 
-    - I do hope to work on the game again at a later stage and add it to the HLL website. 
 
 ### Refactoring
 
@@ -136,11 +118,11 @@
 *Gitpod* IDE was used to write the code for this project.
 
 To make a local copy of this repository, you can clone the project by typing the follow into your IDE terminal:
-- `git clone https://supersheep5-thesecretof-31lde9cg21c.ws-eu83.gitpod.io`
+- `git clone https://supersheep5-jonsvideoga-7balifezslz.ws-eu96b.gitpod.io`
 
 Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://supersheep5-thesecretof-31lde9cg21c.ws-eu83.gitpod.io)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://supersheep5-jonsvideoga-7balifezslz.ws-eu96b.gitpod.io)
 ​
 ### Heroku Deployment
 ​
