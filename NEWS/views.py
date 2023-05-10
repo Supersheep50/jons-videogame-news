@@ -74,10 +74,10 @@ class EditCommentView(View):
     def get(self, request, comment_id):
         comment = get_object_or_404(Comment, id=comment_id)
         form = CommentForm(instance=comment)
-        context = {'form': form}
+        context = {'form': form, 'commented': False}  # Set commented to False initially
         return render(request, 'edit_item.html', context)
 
-    def post(self, request, comment_id):
+    def post(self, request, comment_id, *args, **kwargs):
         comment = get_object_or_404(Comment, id=comment_id)
         comment_form = CommentForm(data=request.POST, instance=comment)
         if comment_form.is_valid():
@@ -85,22 +85,22 @@ class EditCommentView(View):
             comment_form.instance.approved = False
             comment_form.instance.name = request.user.username
             comment = comment_form.save(commit=False)
-
             comment.save()
-        else:
-            comment_form = CommentForm()
-       
-        return render(
-            request,
-            "article.html",
-            {
-                "post": post,
-                "comments": comments,
+
+            # Set commented to True after successfully editing the comment
+            context = {
+                "post": comment.post,
+                "comments": comment.post.comments.filter(approved=True).order_by("-created_on"),
                 "commented": True,
                 "comment_form": comment_form,
-                "liked": liked
-            },
-        )
+                "liked": comment.post.likes.filter(id=request.user.id).exists(),
+            }
+            return render(request, "article.html", context)
+        else:
+            comment_form = CommentForm()
+
+        context = {'form': comment_form, 'commented': False}  # Set commented to False if the form is not valid
+        return render(request, 'edit_item.html', context)
 
 
 class DeleteCommentView(View):
@@ -136,10 +136,6 @@ class DeleteCommentView(View):
         )
 
         
-
-
-
-
 # Code for Like functionality
 
 

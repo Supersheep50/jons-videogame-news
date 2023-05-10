@@ -90,7 +90,7 @@
 
     - Users are able to edit and delete teir comments. 
 
-     ![Edit & Delete Comments]()
+     ![Edit & Delete Comments](/static/images/edit-delete-comments.jpg)
 
 - __Like and Unlike Comments__
 

@@ -3,6 +3,8 @@ from django.core.mail import send_mail
 from django.shortcuts import render
 from .forms import ContactForm
 
+# Code for Contact form
+
 
 def contact_view(request):
     if request.method == 'POST':
