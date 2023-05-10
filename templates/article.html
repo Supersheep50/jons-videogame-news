@@ -93,6 +93,12 @@
                             Edit
                         </a></button>
                     {% endif %}
+
+                    {% if user.username == comment.name %}
+                    <button><a href="/delete/{{ comment.id }}">
+                            Delete
+                        </a></button>
+                    {% endif %}
                 </div>
                 {% endfor %}
             </div>
