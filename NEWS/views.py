@@ -102,38 +102,17 @@ class EditCommentView(View):
         context = {'form': comment_form, 'commented': False}  
         return render(request, 'edit_item.html', context)
 
-
 class DeleteCommentView(View):
     def get(self, request, comment_id):
         comment = get_object_or_404(Comment, id=comment_id)
-        form = CommentForm(instance=comment)
-        context = {'form': form}
+        context = {'comment': comment}
         return render(request, 'delete_item.html', context)
 
     def post(self, request, comment_id):
         comment = get_object_or_404(Comment, id=comment_id)
-        comment_form = CommentForm(data=request.POST, instance=comment)
-        if comment_form.is_valid():
-            comment_form.instance.email = request.user.email
-            comment_form.instance.approved = False
-            comment_form.instance.name = request.user.username
-            comment = comment_form.save(commit=False)
-
-            comment.save()
-        else:
-            comment_form = CommentForm()
-       
-        return render(
-            request,
-            "article.html",
-            {
-                "post": post,
-                "comments": comments,
-                "commented": True,
-                "comment_form": comment_form,
-                "liked": liked
-            },
-        )
+        comment.delete()
+        return HttpResponseRedirect(reverse('post_detail', args=[comment.post.slug]))
+        
 
         
 # Code for Like functionality
