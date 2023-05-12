@@ -74,7 +74,7 @@ class EditCommentView(View):
     def get(self, request, comment_id):
         comment = get_object_or_404(Comment, id=comment_id)
         form = CommentForm(instance=comment)
-        context = {'form': form, 'commented': False}  # Set commented to False initially
+        context = {'form': form, 'commented': False}  
         return render(request, 'edit_item.html', context)
 
     def post(self, request, comment_id, *args, **kwargs):
@@ -87,7 +87,7 @@ class EditCommentView(View):
             comment = comment_form.save(commit=False)
             comment.save()
 
-            # Set commented to True after successfully editing the comment
+           
             context = {
                 "post": comment.post,
                 "comments": comment.post.comments.filter(approved=True).order_by("-created_on"),
@@ -99,7 +99,7 @@ class EditCommentView(View):
         else:
             comment_form = CommentForm()
 
-        context = {'form': comment_form, 'commented': False}  # Set commented to False if the form is not valid
+        context = {'form': comment_form, 'commented': False}  
         return render(request, 'edit_item.html', context)
 
 
