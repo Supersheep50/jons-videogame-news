@@ -6,7 +6,7 @@ from .models import Post, Comment
 from .forms import CommentForm
 
 
-#News Artcile view
+#News Artcile view (credit to course material in Readme)
 
 
 class PostList(generic.ListView):
@@ -69,6 +69,8 @@ class PostDetail(View):
             },
         )
 
+# Code to Edit comments (credit to course material in Readme)
+
 
 class EditCommentView(View):
     def get(self, request, comment_id):
@@ -101,6 +103,7 @@ class EditCommentView(View):
 
         context = {'form': comment_form, 'commented': False}  
         return render(request, 'edit_item.html', context)
+
 
 class DeleteCommentView(View):
     def get(self, request, comment_id):

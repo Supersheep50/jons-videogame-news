@@ -34,6 +34,16 @@
       1. As a frequent user I want to build relationships on the website through the ability to comment.
       2. As a frequent user I want to be able to check the website daily for new news articles and comments.
 
+
+## Agile Planning
+
+### Github Projects
+
+- I used Github Projects to map out my weeks for the project. Adding items as I went and moving them to the completed section once finished. 
+
+![Github Projects](/static/images/github-projects.jpg)
+
+
 ## Features
 
 ### Existing Features
