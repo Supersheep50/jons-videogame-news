@@ -23,6 +23,12 @@ UPDATE Nov 2022 - aria-label warning: I have since been advised that the best wa
 
 - - -
 
+
+### Validator Testing - CSS
+No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/):
+- [CSS validator results](/static/images/css-testing-image.jpg)
+
+
 ### JavaScript Validator
 
 [jshint](https://jshint.com/) was used to validate the JavaScript.
