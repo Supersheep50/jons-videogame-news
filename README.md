@@ -78,6 +78,12 @@
 
     ![Contact Section](/static/images/contact-image.jpg)
 
+    __Contact Section Confirmed__
+
+    - Once a message ahs been sent, users receive this confirmation message.
+
+    ![Contact Section Confirmed](/static/images/contact-form-confirmed-image.jpg)
+
 - __Register Section__
 
     - At the top right of the website users can register with the webiste so that they write and like comments.

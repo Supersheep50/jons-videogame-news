@@ -105,6 +105,9 @@ class EditCommentView(View):
         return render(request, 'edit_item.html', context)
 
 
+# Code to Edit comments (credit to tutor support and course material in Readme)
+
+
 class DeleteCommentView(View):
     def get(self, request, comment_id):
         comment = get_object_or_404(Comment, id=comment_id)
