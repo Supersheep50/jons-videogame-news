@@ -92,7 +92,7 @@
 
 - __Social Links__
 
-    - Screenshot of Google Sheet for the logbook
+    - Screenshot of social media links in footer
    
     ![Social Links](/static/images/social-links.jpg)
 
