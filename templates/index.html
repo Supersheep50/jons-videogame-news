@@ -8,28 +8,28 @@
     <img src="{% static 'images/background-image-home.webp' %}" alt="image of lots of videogame consoles">
 </div>
 <!--News Articles-->
-<section>
+
+<div class="col-md-12 col-lg-8-col-xl-7 news-posts">
     {% for post in post_list %}
-    <div class="col-md-12 col-lg-8-col-xl-7 news-posts">
-        <div class="news-preview news-posts">
-            <a href="{% url 'post_detail' post.slug  %}">
-                <div>
-                    <h2 class="news-title">{{ post.title }}</h2>
-                </div>
-                <div>
-                    <h3 class="news-subtitle">{{ post.excerpt }}</h3>
-                </div>
-            </a>
-            <p class="news-posted-by">
-                Posted by {{ post.author }} on {{ post.created_on }}
-            </p>
-            <hr />
-            <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
-                {{ post.number_of_likes }}</p>
-        </div>
+    <div class="news-preview news-posts">
+        <a href="{% url 'post_detail' post.slug  %}">
+            <div>
+                <h2 class="news-title">{{ post.title }}</h2>
+            </div>
+            <div>
+                <h3 class="news-subtitle">{{ post.excerpt }}</h3>
+            </div>
+        </a>
+        <p class="news-posted-by">
+            Posted by {{ post.author }} on {{ post.created_on }}
+        </p>
+        <hr />
+        <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
+            {{ post.number_of_likes }}</p>
     </div>
-    {% endfor %}
-</section>
+</div>
+{% endfor %}
+
 
 
 {% endblock %}
