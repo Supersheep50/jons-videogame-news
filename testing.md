@@ -2,12 +2,14 @@
 
 ### Validator Testing - HTML
 
-[W3C](https://validator.w3.org/) was used to validate the HTML on all pages of the website. I have checked the HTML via direct input and also by inspecting the page source and running this through the validator.
+[W3C](https://validator.w3.org/) was used to validate the HTML on all pages of the website. I have checked the HTML via address input and also by inspecting the page source and running this through the validator.
 
-* [Index Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbookworm2022.herokuapp.com%2F) - No errors or warnings.
-
-
-
+* [Home Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbookworm2022.herokuapp.com%2F) - No errors or warnings.
+* [About Page](/static/images/about-validator.jpg) - No errors.
+* [Contact Page](/static/images/contact-validator.jpg) - No errors.
+* [Register Page](/static/images/register-validator.jpg) - No errors.
+* [Login Page](/static/images/login-validator.jpg) - No errors.
+* [News Articles](/static/images/news-articles-image.jpg) - 28 errors. Due to the fact that the news article posts are written in the back end using an editor, they through up errors on the validator as it is reading the text as html. I was not ablt to figure out a way around this and it was not mentioned in the course material for the Django Blog.
 
 
 ### Validator Testing - CSS
@@ -25,17 +27,12 @@ No errors were found when passing through the official [(Jigsaw) validator](http
 
 ### Python Validator
 
-~~[PEP8](http://pep8online.com/) was used to validate the python files. Due to limited time for completing this project I have been unable to completely fix all PEP8 errors in all the files, I need to do some further research into the best ways to break lines that are too long.~~
+- Code Institutes Python Linter was used to validate any written Python Code.
 
-UPDATE Nov 2022: The PEP8 validator site mentioned above has since gone down. I am therefore relying on using the [pycodestyle](https://pypi.org/project/pycodestyle/) package within my IDE to ensure that my code meets PEP8 guidelines.
+* [contact/forms.py](/static/images/contact-forms-validator.jpg) - No errors or warnings.
+* [contact/models.py](/static/images/contact-models-validator.jpg) - No errors or warnings.
 
-* [app.py](documentation/testing/validation/python-app.png) - No errors or warnings.
-* [models.py](documentation/testing/validation/python-models.png) - No errors or warnings.
-* [__init__.py](documentation/testing/validation/python-init.png) - No errors or warnings.
-* [auth/routes.py](documentation/testing/validation/python-auth-routes.png) - Please see further information below regarding nomember error resolution. No other errors or warnings.
-* [books/routes.py](documentation/testing/validation/python-book-routes.png) - Please see further information below regarding nomember error resolution, and bare exception resolution. No other errors or warnings.
-* [error_handlers/routes.py](documentation/testing/validation/python-error-routes.png) - There is a [warning](documentation/testing/validation/error-route-pep8.png) regarding the argument `e` not being used. I tried removing this argument from the code, however the error pages then didn't load, they defaulted to the generic error pages. I have added back in the argument `e` to allow the error handling to work correctly and to display my own error pages to the user. I am therefore happy to leave this warning in place. Pylint also gives feedback that the argument `e` doesn't conform to snake_case naming style. Again I am happy to leave this feedback, as there is no way to snake_case name a singular letter.
-* [main/routes.py](documentation/testing/validation/python-main-routes.png) - No errors or warnings.
+
 
 Nomember error resolution.
 
@@ -91,17 +88,18 @@ I have used the WAVE testing tool to try and ensure there are no accessibility i
 
 The site was tested manually by going through all CRUD screens and forms, and ensuring error validation and functionality. 
 
+
 | Test Case | Pass? | Screenshot |
 |-----------|-------|------------|
-|Sign-up form: username is required|Yes|![Error message if username is not filled in](static/readme/test-signup-username.png)|
-|Sign-up form: password must be longer than 8 characters|Yes|![Error message if username is less than 8 characters](static/readme/test-signup-password-8.jpg)|
-|Sign-up form: password must not be longer than 15 characters|Yes|![Error message if username is longer than 15 characters](static/readme/test-signup-password-15.png)|
-|Sign-up form: password is required|Yes|![Error message if passworld is not filled in](static/readme/test-signup-password.jpg)|
-|Login form: validation message shows when user logs in|Yes|![Validation message after login](static/readme/test-login-message.png)|
-|Add planet form: name is required|Yes|![Error messsage if name is not selected from the list](static/readme/test-add-planet-name.jpg)|
-|Add planet form: validation message when planet is added|Yes|![Validation message when planet is added](static/readme/test-add-planet-validation.jpg)|
-|Edit planet form: validation message when planet is edited|Yes|![Validation message when planet is edited](static/readme/test-edit-planet-validation.png)|
-|Delete planet form: validation message when planet is deleted|Yes|![Validation message when planet is deleted](static/readme/test-delete-planet-validation.jpg)|
-|Log out form: validation message when user logs out|Yes|![Validation message when user logs out](static/readme/test-sign-out-validation.jpg)|
+|Name & age input options: enter a space|Yes|![Successful error message](/documents/testing/name-input-error-1.png)|
+|Name & age input options: enter a letter|Yes|![Successful error message](/documents/testing/name-input-error-2.png)|
+|Name & age input options: enter a special character|Yes|![Successful error message](/documents/testing/name-input-error-3.png)|
+|Main menu options: enter a number not between 1-3|Yes|![Successful error message](/documents/testing/main-menu-input-error.png)|
+|Main menu options: enter a space |Yes|![Successful error message](/documents/testing/main-menu-input-error.2.png)|
+|Main menu options: enter a special character |Yes|![Successful error message](/documents/testing/main-menu-input-error.3.png)|
+|Yes or No questions: enter a special character |Yes|![Successful error message](/documents/testing/yes-no-error.png)|
+|Yes or No questions: enter a number |Yes|![Successful error message](/documents/testing/yes-no-error.2.png)|
+|Yes or No questions: enter a space |Yes|![Successful error message](/documents/testing/yes-no-error.3.png)|
+|Crossroad direction questions: enter a number |Yes|![Successful error message](/documents/testing/crossroads-error.png)|
 
 The site was tested on the following devices: MacBook Air, MacBook Pro, iPhone, and iPad. The site was tested in Chrome and Safari.
