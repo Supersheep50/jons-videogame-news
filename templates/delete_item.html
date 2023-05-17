@@ -1,31 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-
 {% extends "base.html" %}
 
 {% load static %}
 {% block content %}
 
-<body>
-    {% if commented %}
-    <div class="alert alert-success" role="alert">
-        Your comment is awaiting approval
-    </div>
-    {% else %}
-    {% if user.is_authenticated %}
-    <h1>Delete a Comment:</h1>
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <div>
-            <p>
-                <button type="submit">Delete Comment</button>
-            </p>
-        </div>
-    </form>
 
-    {% endif %}
-    {% endif %}
-</body>
+{% if commented %}
+<div class="alert alert-success" role="alert">
+    Your comment is awaiting approval
+</div>
+{% else %}
+{% if user.is_authenticated %}
+<h1>Delete a Comment:</h1>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div>
+        <p>
+            <button type="submit">Delete Comment</button>
+        </p>
+    </div>
+</form>
+
+{% endif %}
+{% endif %}
+
 
 {% endblock content %}
