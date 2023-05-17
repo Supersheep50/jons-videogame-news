@@ -31,6 +31,19 @@ No errors were found when passing through the official [(Jigsaw) validator](http
 
 * [contact/forms.py](/static/images/contact-forms-validator.jpg) - No errors or warnings.
 * [contact/models.py](/static/images/contact-models-validator.jpg) - No errors or warnings.
+* [contact/urls.py](/static/images/contact-form-urls.jpg) - No errors or warnings.
+* [contact/views.py](/static/images/contact-form-views.jpg) - No errors or warnings.
+* [jvn/urls.py](/static/images/jvn-urls-validation.jpg) - No errors or warnings.
+* [news/admin.py](/static/images/news-admin-validation.jpg) - No errors or warnings.
+* [news/forms.py](/static/images/news-forms-validation.jpg) - No errors or warnings.
+* [news/models.py](/static/images/news-models-validation.jpg) - No errors or warnings.
+
+
+
+
+
+
+
 
 
 
