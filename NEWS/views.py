@@ -6,7 +6,7 @@ from .models import Post, Comment
 from .forms import CommentForm
 
 
-#News Artcile view (credit to course material in Readme)
+# News Artcile view (credit to course material in Readme)
 
 
 class PostList(generic.ListView):

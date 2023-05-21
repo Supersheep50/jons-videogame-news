@@ -62,7 +62,7 @@
 
 - __Login/Log out Alert__
 
-    - Each time a user logins or logs out a message alert flashes to tell they have been successful in doing so.
+    - Each time a user logins or logs out a message alert flashes to tell them they have been successful in doing so.
     
     ![Login/Log out Alert](/static/images/login-alert.jpg)
 
@@ -80,7 +80,7 @@
 
     __Contact Section Confirmed__
 
-    - Once a message ahs been sent, users receive this confirmation message.
+    - Once a message has been sent, users receive this confirmation message.
 
     ![Contact Section Confirmed](/static/images/contact-form-confirmed-image.jpg)
 
@@ -104,7 +104,7 @@
 
  - __Edit & Delete Comments__
 
-    - Users are able to edit and delete teir comments. 
+    - Users are able to edit and delete their comments. 
 
      ![Edit & Delete Comments](/static/images/edit-delete-comments.jpg)
 
@@ -134,8 +134,6 @@
     - Ability to approve comments through the backend admin by the superuser.
 
     ![Backend Admin Write/Edit posts](/static/images/approve-comments.png)
-
-
 
 ## Testing 
 
@@ -189,8 +187,6 @@ After the above steps are completed, install dj-database-url to your project, by
 - `os.environ.setdefault("DATABASE_URL", "my_copied_database_url")`
 - Then update `requirements.txt` by typing `pip3 freeze --local > requirements.txt`.
 
-
-
 ### Heroku Deployment
 ​
 This project uses [Heroku](https://www.heroku.com), a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
@@ -224,7 +220,7 @@ For Heroku deployment, follow these steps to connect your GitHub repository to t
 
 The frontend terminal should now be connected and deployed to Heroku.
 
-## Credits 
+## Credits and Bugs
 
 ### Media
 - [Looka.com](https://looka.com/) was used to create the logo. 
@@ -243,8 +239,14 @@ The frontend terminal should now be connected and deployed to Heroku.
 
 - [comicbook.com](https://comicbook.com/gaming/news/the-witcher-3-wild-hunt-incredible-mod-first-person/) for the Witcher News Article photo.
 
-
 ### Content 
+
+- [Code Institute's Gitpod Full Template](https://github.com/Code-Institute-Org/gitpod-full-template) was used as the starting workspace template for this project.
+
+- [Code Institute's README Template](https://github.com/Code-Institute-Solutions/readme-template) was used to structure this README.
+
+- [Balsamiq](https://balsamiq.com/) to create wireframes during the design phase.
+
 - [gamespot.com](https://www.gamespot.com/reviews/the-super-mario-bros-movie-review-actually-awesome/1900-6418051/#:~:text=The%20Super%20Mario%20Bros..,Super%20Show%20theme%2D%2Dstruggling.) was used for the Super Mario bros article content.
 
 - [gamespot.com](https://www.gamespot.com/articles/god-of-war-ragnaroks-new-game-plus-mode-is-available-now-offers-increased-level-cap/1100-6512992/) was used for the God of War article content.
@@ -253,9 +255,33 @@ The frontend terminal should now be connected and deployed to Heroku.
 
 - [vulkk.com](https://vulkk.com/2022/12/12/the-witcher-3-next-gen-update-everything-you-should-know/) was used for the Witcher article content.
 
+### Code
 
+- Basic structure for posting news articles was used from the Code Institute modules I Think Therefore I Blog and Hello Django. As well as setting up the admin backend.
 
+- Both modules and source code also used for adding commenting and editing commenting functionality. As well as the ability to like comments.
 
+-[MDN Web Docs](https://developer.mozilla.org/en-US/) for general debugging. 
+
+-[StackoverFlow](https://stackoverflow.com/questions/62610222/adding-comment-class-view) used ideas and suugesstions from StackOverflow to add comment functionality.
+
+-[StackoverFlow](https://stackoverflow.com/questions/49926871/django-edit-comment) also used some code from Stackoverflow to add ability to edit comments.
+
+- Code from Nav Bar used from previous project A History of the Playstation. 
+
+- [Geeks for Geeks](https://www.geeksforgeeks.org/deleteview-class-based-views-django/) code for deleting comments assisted by this site. A Student Support Tutor helpfully sent this on.
+
+- [Twilio](https://www.twilio.com/blog/build-contact-form-python-django-twilio-sendgrid) code for adding a contact form app partially used from this site. I also must credit Alan in Tutor support as we spent hours together fixing a big here.
+
+- Advice, help, debugging and guidance for my whole project from my mentor AJ and my partner Steph.
+
+- Alert functions for logging in and logging out used from Code Institutes course material and source code.
+
+- Javascript Alert and timout function taken from previous project The Hey! Look! Listen! Quiz and some assistance from Tutor Support.
+
+- Some deployment instructions are from Code Institute's 'Deployment' section, in the 'Hello Django' module of the course.
+
+- Slack used to ask questions from fellow students and alumnis. This was particular helpful when trying to get my Heroku Deployment working properly.
 
 
 ## Acknowledgements 
