@@ -22,11 +22,10 @@
       1. As a first time user I want to understand what is JVN.
       2. As a first time visitor I want to understand how to navigate JVN. 
       3. As a first time user I want to understand how to read news articles, like comments, read, edit and delete comments.
-      4. As a first time visitor I want to try to beat the game and enter my name into the logbook.
 
   -   #### Returning Visitor Goals
 
-      1. As a returning visitor I want to see new news artciles. 
+      1. As a returning visitor I want to see new news articles. 
       2. As a returning visitor I want to see what new comments are there. 
       3. As a returning visitor I want to see if people have liked or reacted to my comments.
 
@@ -86,7 +85,7 @@
 
 - __Register Section__
 
-    - At the top right of the website users can register with the webiste so that they write and like comments.
+    - At the top right of the website users can register with the website so that they write and like comments.
 
     ![Register Section](/static/images/register-section.jpg)
 
@@ -156,7 +155,7 @@ Alternatively, if using Gitpod, you can click below to create your own workspace
 
 To host my database, I used ElephantSQL. 
 
-The instructions to create a new account can be[found here](https://code-institute-students.github.io/deployment-docs/02-elephantsql/elephantsql-01-sign-up), provided by Code Institute. 
+The instructions to create a new account can be [found here](https://code-institute-students.github.io/deployment-docs/02-elephantsql/elephantsql-01-sign-up), provided by Code Institute. 
 
 Once you have created an account:
 - Log in to ElephantSQL to access your dashboard.
@@ -263,23 +262,23 @@ The frontend terminal should now be connected and deployed to Heroku.
 
 - Both modules and source code also used for adding commenting and editing commenting functionality. As well as the ability to like comments.
 
--[MDN Web Docs](https://developer.mozilla.org/en-US/) for general debugging. 
+- [MDN Web Docs](https://developer.mozilla.org/en-US/) for general debugging. 
 
--[StackoverFlow](https://stackoverflow.com/questions/62610222/adding-comment-class-view) used ideas and suugesstions from StackOverflow to add comment functionality.
+- [StackoverFlow](https://stackoverflow.com/questions/62610222/adding-comment-class-view) used ideas and suugesstions from StackOverflow to add comment functionality.
 
--[StackoverFlow](https://stackoverflow.com/questions/49926871/django-edit-comment) also used some code from Stackoverflow to add ability to edit comments.
+- [StackoverFlow](https://stackoverflow.com/questions/49926871/django-edit-comment) also used some code from Stackoverflow to add ability to edit comments.
 
 - Code from Nav Bar used from previous project A History of the Playstation. 
 
 - [Geeks for Geeks](https://www.geeksforgeeks.org/deleteview-class-based-views-django/) code for deleting comments assisted by this site. A Student Support Tutor helpfully sent this on.
 
-- [Twilio](https://www.twilio.com/blog/build-contact-form-python-django-twilio-sendgrid) code for adding a contact form app partially used from this site. I also must credit Alan in Tutor support as we spent hours together fixing a big here.
+- [Twilio](https://www.twilio.com/blog/build-contact-form-python-django-twilio-sendgrid) code for adding a contact form app partially used from this site. I also must credit Alan in Tutor support as we spent hours together fixing a bug here.
 
 - Advice, help, debugging and guidance for my whole project from my mentor AJ and my partner Steph.
 
 - Alert functions for logging in and logging out used from Code Institutes course material and source code.
 
-- Javascript Alert and timout function taken from previous project The Hey! Look! Listen! Quiz and some assistance from Tutor Support.
+- Javascript Alert and timeout function taken from previous project The Hey! Look! Listen! Quiz and some assistance from Tutor Support.
 
 - Some deployment instructions are from Code Institute's 'Deployment' section, in the 'Hello Django' module of the course.
 
