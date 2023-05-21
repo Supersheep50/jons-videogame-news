@@ -7,9 +7,8 @@
     <img src="{% static 'images/background-image-home.webp' %}" alt="image of lots of videogame consoles">
 </div>
 <!--News Articles-->
-
+{% for post in post_list %}
 <div class="col-md-12 col-lg-8-col-xl-7 news-posts">
-    {% for post in post_list %}
     <div class="news-preview news-posts">
         <a href="{% url 'post_detail' post.slug  %}">
             <div>
