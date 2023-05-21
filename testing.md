@@ -87,6 +87,18 @@ The site was tested manually by going through all CRUD screens and forms, and en
 |Comment Edit Message Successful|Yes|![Successful error message](/static/images/comment-edit-successful-alert.png)|
 |Comment Edit Posted|Yes|![Successful error message](/static/images/comment-edited-posted.png)|
 |Comment Delete Page|Yes|![Successful error message](/static/images/comment-delete-page.png)|
+|Comment Delete Successful|Yes|![Successful error message](/static/images/comment-delete-successful.png)|
+|Like Button|Yes|![Successful error message](/static/images/like-button.png)|
+|Like Successful|Yes|![Successful error message](/static/images/like-button-successful.png)|
+|Admin Username Required |Yes|![Successful error message](/static/images/admin-username-required-error.png)|
+|Admin Password Required |Yes|![Successful error message](/static/images/admin-password-required-error.png)|
+|Admin Staff Account Required |Yes|![Successful error message](/static/images/admin-staff-account-required-error.png)|
+
+
+
+
+
+
 
 
 

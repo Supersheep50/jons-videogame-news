@@ -115,6 +115,28 @@
     ![Like and Unlike Comments](/static/images/like-posts-image.jpg)
 
 
+- __Admin for posting News Articles__
+
+    - Ability to post comments through the backend admin by the superuser.
+
+    ![Backend Admin](/static/images/admin-post-articles.png)
+
+
+- __Admin for editing and writing News Articles__
+
+    - Ability to write/edit comments through the backend admin by the superuser.
+
+    ![Backend Admin Write/Edit posts](/static/images/admin-post-edit-articles.png)
+
+
+- __Admin for approving comments__
+
+    - Ability to approve comments through the backend admin by the superuser.
+
+    ![Backend Admin Write/Edit posts](/static/images/approve-comments.png)
+
+
+
 ## Testing 
 
 - Please see the [Testing file](testing.md) for manual & validator testing.
