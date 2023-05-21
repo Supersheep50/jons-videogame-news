@@ -117,8 +117,8 @@ class DeleteCommentView(View):
     def post(self, request, comment_id):
         comment = get_object_or_404(Comment, id=comment_id)
         comment.delete()
-        return HttpResponseRedirect(reverse('post_detail', args=[comment.post.slug]))
-        
+        context = {'deleted': True}  
+        return render(request, 'delete_item.html', context)
 
         
 # Code for Like functionality

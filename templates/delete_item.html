@@ -3,10 +3,9 @@
 {% load static %}
 {% block content %}
 
-
-{% if commented %}
+{% if deleted %}
 <div class="alert alert-success" role="alert">
-    Your comment is awaiting approval
+    Your comment has been deleted.
 </div>
 {% else %}
 {% if user.is_authenticated %}
@@ -20,9 +19,7 @@
         </p>
     </div>
 </form>
-
 {% endif %}
 {% endif %}
-
 
 {% endblock content %}
