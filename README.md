@@ -132,6 +132,43 @@ Alternatively, if using Gitpod, you can click below to create your own workspace
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://supersheep5-jonsvideoga-7balifezslz.ws-eu96b.gitpod.io)
 ​
+### ElephantSQL Deployment
+
+To host my database, I used ElephantSQL. 
+
+The instructions to create a new account can be[found here](https://code-institute-students.github.io/deployment-docs/02-elephantsql/elephantsql-01-sign-up), provided by Code Institute. 
+
+Once you have created an account:
+- Log in to ElephantSQL to access your dashboard.
+- Click *Create New Instance*.
+- Give your plan a name (usually the name of the project, in this case *ME1 Planet Tracker*).
+- Select the Tiny Turtle (Free) plan.
+- Leave the Tags field blank.
+- Click *Select Region* and choose a data center near you.
+- Click *Review*, then, if everything looks correct, *Create Instance*.
+- Go back to your dashboard and click on the name of the project. 
+- Copy the database URL for your project, and use it in two places:
+  - In your `env.py` file, create a new key called `DATABASE_URL` and give it the value of the ElephantSQL database URL, as follows: ` os.environ.setdefault("DATABASE_URL", "my_copied_database_url")`.
+    - Before deploying the project, create a file called `env.py` (if it hasn't been created already), and complete the following steps:
+      - In `settings.py`: At the top of the file, add the following import:
+      ```python
+      import os
+
+      if os.path.isfile("env.py"):
+          import env
+      ```
+      - Replace the pasted-in database url with the following code:
+      ```python
+      os.environ.get("DATABASE_URL")
+      ```
+  - Paste the database URL into the config vars section of your project on Heroku - instructions are in the *Heroku Deployment* section below. 
+
+After the above steps are completed, install dj-database-url to your project, by typing the following command in the terminal and pressing enter:
+- `os.environ.setdefault("DATABASE_URL", "my_copied_database_url")`
+- Then update `requirements.txt` by typing `pip3 freeze --local > requirements.txt`.
+
+
+
 ### Heroku Deployment
 ​
 This project uses [Heroku](https://www.heroku.com), a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
