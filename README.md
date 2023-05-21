@@ -227,26 +227,35 @@ The frontend terminal should now be connected and deployed to Heroku.
 ## Credits 
 
 ### Media
-- [Patorjk.com](https://patorjk.com/) was used to create the heading.
+- [Looka.com](https://looka.com/) was used to create the logo. 
 
-- Emojis used from [Unicode.com](https://unicode.org/emoji/charts/full-emoji-list.html)
+- [realgear.net](https://realgear.net) for the Home page background photo.
+
+- [raregallery.net](https://realgear.net) for the About page background photo.
+
+- [wallpaperFlare](https://wallpaperflare.com) for the Contact page background photo.
+
+- [supermariobrosmovie.com](https://www.thesupermariobros.movie/character-gallery/) for the Mario News Article photo.
+
+- [imdb.com](https://www.imdb.com) for the God of War News Article photo.
+
+- [ign.com](https://sea.ign.com/google-stadia/197408/news/former-stadia-boss-phil-harrison-quietly-leaves-google-following-service-closure) for the Stadia News Article photo.
+
+- [comicbook.com](https://comicbook.com/gaming/news/the-witcher-3-wild-hunt-incredible-mod-first-person/) for the Witcher News Article photo.
+
 
 ### Content 
-- I used Code Institute's Love Sandwiches Walkthrough ([repo here](https://github.com/Code-Institute-Solutions/love-sandwiches-p5-sourcecode/tree/master/05-deployment/01-deployment-part-1)) for guidance with code structure, linking my program to Google Sheets using an API, and deployment steps.
+- [gamespot.com](https://www.gamespot.com/reviews/the-super-mario-bros-movie-review-actually-awesome/1900-6418051/#:~:text=The%20Super%20Mario%20Bros..,Super%20Show%20theme%2D%2Dstruggling.) was used for the Super Mario bros article content.
 
-- For slower printing to the terminal I used Stackoverflow. The page is [here](https://stackoverflow.com/questions/510348/how-do-i-make-a-time-delay) 
+- [gamespot.com](https://www.gamespot.com/articles/god-of-war-ragnaroks-new-game-plus-mode-is-available-now-offers-increased-level-cap/1100-6512992/) was used for the God of War article content.
 
-- To change the color of the text I used ANSI color. Page from Stackoverflow helping it explain it to me found [here](https://stackoverflow.com/questions/4842424/list-of-ansi-color-escape-sequences)
+- [ign.com](https://www.ign.com/articles/former-stadia-boss-phil-harrison-quietly-leaves-google-following-service-closure) was used for the Stadia article content.
 
-- For the add inventory function I used this video to help me form the basics of what I needed [here](https://www.youtube.com/watch?v=rvKxC-p6kbg)
+- [vulkk.com](https://vulkk.com/2022/12/12/the-witcher-3-next-gen-update-everything-you-should-know/) was used for the Witcher article content.
 
-- Code to help validate the user input [here](https://initialcommit.com/blog/python-isalpha-string-method) and two seperate sessions with Tutor Support.
 
-- To create the ability to move from tomb to tomb I referenced this page [here](https://www.makeuseof.com/python-text-adventure-game-create/)
 
-- Used Love Sandwiches walkthrough to build out collecting data for the logbook.
 
-- To clear the screen after the user selects Try Again, I referenced this page [here](https://stackoverflow.com/questions/4810537/how-to-clear-the-screen-in-python)
 
 
 ## Acknowledgements 
