@@ -291,8 +291,7 @@ The frontend terminal should now be connected and deployed to Heroku.
 - Initially website would not load correctly on Heroku. Issue with Cloudinary was discovered and needed to delete all static files being hosted on the website.
 - Contact form originally was sending emails but not diverting users to the correct page afterwards to show that the message was sent. Tutor support helped me here in discovering what ended up being a fairly simple typo. 
 - Not exactly a bug but had one instance of not pushing code when I thought I had, Lost all code and work that was around building a delete comment functionality. Only discovered at Readme phase but was thankfully able to recall some of it and also had some of it shared in a comment on Slack. Lesson learned. 
-- Originally Like and Comment buttons went off the side of the screen on mobile. Added code to adjust this. 
-- No bugs found after latest deployment.
+
 
 
 ## Acknowledgements 

@@ -30,9 +30,9 @@
                 <p class="card-text ">
                     {{ post.content | safe }}
                 </p>
-                <div class="row justify-content-end">
+                <div class="row">
                     <!-- Code for liking comments-->
-                    <div class="col-1 offset-md-10">
+                    <div class="col-1 ml-auto text-center">
                         <strong>
                             {% if user.is_authenticated %}
                             <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
@@ -52,7 +52,7 @@
                             <span class="text-secondary">{{ post.number_of_likes }} </span>
                         </strong>
                     </div>
-                    <div class="col-1">
+                    <div class="col-1 text-center">
                         {% with comments.count as total_comments %}
                         <strong class="text-secondary"><i class="far fa-comments"></i>
 
