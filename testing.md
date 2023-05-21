@@ -64,7 +64,7 @@ I used Lighthouse within the Chrome Developer Tools to test the performance, acc
 
 ### Manual Testing
 
-The site was tested manually by going through all CRUD screens and forms, and ensuring error validation and functionality. 
+The site was tested manually by going through all CRUD screens and forms, and ensuring error validation and functionality. The HTML, Python and Javascript code was all manually tested as shown below.
 
 
 | Test Case | Pass? | Screenshot |
@@ -76,6 +76,29 @@ The site was tested manually by going through all CRUD screens and forms, and en
 |Login- Password Required |Yes|![Successful error message](/static/images/login-password-required-error.png)|
 |Login Successful|Yes|![Successful error message](/static/images/login-successful-alert.png)|
 |Logout Successful|Yes|![Successful error message](/static/images/logout-successful-alert.png)|
+|Contact Email Required|Yes|![Successful error message](/static/images/contact-email-required-error.png)|
+|Contact Subject Required|Yes|![Successful error message](/static/images/Contact-subject-required.png)|
+|Contact Message Required|Yes|![Successful error message](/static/images/Contact-message-required-error.png)|
+|Comment Message Required|Yes|![Successful error message](/static/images/comment-message-required-error.png)|
+|Comment Message Successful|Yes|![Successful error message](/static/images/comment-message-successful-alert.png)|
+|Comment Posted|Yes|![Successful error message](/static/images/comment-posted.png)|
+|Comment Edit|Yes|![Successful error message](/static/images/comment-edit-page.png)|
+|Comment Edit Message Required|Yes|![Successful error message](/static/images/comment-edit-message-required-error.png)|
+|Comment Edit Message Successful|Yes|![Successful error message](/static/images/comment-edit-successful-alert.png)|
+|Comment Edit Posted|Yes|![Successful error message](/static/images/comment-edited-posted.png)|
+|Comment Delete Page|Yes|![Successful error message](/static/images/comment-delete-page.png)|
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
