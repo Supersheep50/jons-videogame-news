@@ -263,6 +263,15 @@ body {
     }
 }
 
+.btn-like {
+    font-size: 12px;
+    padding: 5px;
+}
+
+.fa-comments {
+    font-size: 12px;
+}
+
 @media screen and (max-width: 580px) {
 
     .nav-bar {
