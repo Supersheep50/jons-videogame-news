@@ -115,14 +115,6 @@
     ![Like and Unlike Comments](/static/images/like-posts-image.jpg)
 
 
-### Refactoring
-
-- __Refactored User Profile code__
-
-    - Originally the user would enter their name at the beginning of the game but it would not create a user profile to store the data for the entirety of the game. I decided to make use of some OOP and add the ability to create a user and then also validate the users name and age. Validating that there was no blank spaces proved particualrly tricky. 
-
-    ![Refactored Code](/documents/images/user-refactored.png) 
-
 ## Testing 
 
 - Please see the [Testing file](testing.md) for manual & validator testing.
