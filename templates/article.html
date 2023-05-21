@@ -24,15 +24,15 @@
 <!--Post authentication and content-->
 <div class="container">
     <div class="row">
-        <div class="col card mb-4  mt-3 left  top">
+        <div class="col card mb-4  mt-3 left top">
             <div class="card-body">
 
                 <p class="card-text ">
                     {{ post.content | safe }}
                 </p>
-                <div class="row">
+                <div class="row justify-content-end">
                     <!-- Code for liking comments-->
-                    <div class="col-1">
+                    <div class="col-1 offset-md-10">
                         <strong>
                             {% if user.is_authenticated %}
                             <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">

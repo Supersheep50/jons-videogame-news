@@ -257,6 +257,8 @@ The frontend terminal should now be connected and deployed to Heroku.
 
 ### Code
 
+- [Code Pen](https://codepen.io/) Lots and lots of time spent in Code Pen testing and trying diffetent bits of code before adding to Gitpod.
+
 - Basic structure for posting news articles was used from the Code Institute modules I Think Therefore I Blog and Hello Django. As well as setting up the admin backend.
 
 - Both modules and source code also used for adding commenting and editing commenting functionality. As well as the ability to like comments.
