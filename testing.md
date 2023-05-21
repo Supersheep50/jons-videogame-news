@@ -4,7 +4,7 @@
 
 [W3C](https://validator.w3.org/) was used to validate the HTML on all pages of the website. I have checked the HTML via address input and also by inspecting the page source and running this through the validator.
 
-* [Home Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbookworm2022.herokuapp.com%2F) - No errors or warnings.
+* [Home Page](/static/images/home-validator.png4) - No errors or warnings.
 * [About Page](/static/images/about-validator.jpg) - No errors.
 * [Contact Page](/static/images/contact-validator.jpg) - No errors.
 * [Register Page](/static/images/register-validator.jpg) - No errors.
