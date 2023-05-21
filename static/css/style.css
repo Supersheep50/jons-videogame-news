@@ -248,6 +248,28 @@ body {
     font-size: large;
 }
 
+/* Like button and comment counter */
+
+.btn-like {
+    color: #E84610;
+    border: none;
+    background: transparent;
+    font-size: 12px;
+    padding: 5px;
+
+}
+
+.btn-like:hover,
+.btn-like:active {
+    color: #E84610;
+    background: transparent;
+    border: none;
+}
+
+.fa-comments {
+    font-size: 12px;
+}
+
 /* Responsiveness */
 @media screen and (max-width:1190px) {
 
@@ -261,15 +283,6 @@ body {
     .title {
         display: none;
     }
-}
-
-.btn-like {
-    font-size: 12px;
-    padding: 5px;
-}
-
-.fa-comments {
-    font-size: 12px;
 }
 
 @media screen and (max-width: 580px) {
