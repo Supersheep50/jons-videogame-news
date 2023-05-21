@@ -105,12 +105,12 @@ WSGI_APPLICATION = 'JVN.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-#DATABASES = {
+# DATABASES = {
 #   'default': {
 #        'ENGINE': 'django.db.backends.sqlite3',
 #        'NAME': BASE_DIR / 'db.sqlite3',
 #    }
-#}
+# }
 
 DATABASES = {
    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
@@ -170,7 +170,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 CONTACT_EMAIL = 'jonathan.morrisseyto@gmail.com',
-ADMIN_EMAIL = 'jonathan.morrisseyto@gmail.com', 
+ADMIN_EMAIL = 'jonathan.morrisseyto@gmail.com',
 
 
 # Twilio SendGrid
