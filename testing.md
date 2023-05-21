@@ -69,15 +69,21 @@ The site was tested manually by going through all CRUD screens and forms, and en
 
 | Test Case | Pass? | Screenshot |
 |-----------|-------|------------|
-|Name & age input options: enter a space|Yes|![Successful error message](/documents/testing/name-input-error-1.png)|
-|Name & age input options: enter a letter|Yes|![Successful error message](/documents/testing/name-input-error-2.png)|
-|Name & age input options: enter a special character|Yes|![Successful error message](/documents/testing/name-input-error-3.png)|
-|Main menu options: enter a number not between 1-3|Yes|![Successful error message](/documents/testing/main-menu-input-error.png)|
-|Main menu options: enter a space |Yes|![Successful error message](/documents/testing/main-menu-input-error.2.png)|
-|Main menu options: enter a special character |Yes|![Successful error message](/documents/testing/main-menu-input-error.3.png)|
-|Yes or No questions: enter a special character |Yes|![Successful error message](/documents/testing/yes-no-error.png)|
-|Yes or No questions: enter a number |Yes|![Successful error message](/documents/testing/yes-no-error.2.png)|
-|Yes or No questions: enter a space |Yes|![Successful error message](/documents/testing/yes-no-error.3.png)|
-|Crossroad direction questions: enter a number |Yes|![Successful error message](/documents/testing/crossroads-error.png)|
+|Register- Username Required|Yes|![Successful error message](/static/images/register-username-error.png)|
+|Register- Password Required|Yes|![Successful error message](/static/images/register-password-error.png)|
+|Register- Password Confirmation|Yes|![Successful error message](/static/images/register-password-confirmation-error.png)|
+|Login- Username Required |Yes|![Successful error message](/static/images/login-username-error.png)|
+|Login- Password Required |Yes|![Successful error message](/static/images/login-password-required-error.png)|
+|Login Successful|Yes|![Successful error message](/static/images/login-successful-alert.png)|
+|Logout Successful|Yes|![Successful error message](/static/images/logout-successful-alert.png)|
+
+
+
+
+
+
+
+
+
 
 The site was tested on the following devices: MacBook Air, MacBook Pro, iPhone, iPad, Google Pixel and ASUS laptop. The site was tested in Chrome and Safari.
