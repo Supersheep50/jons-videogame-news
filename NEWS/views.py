@@ -75,12 +75,16 @@ class PostDetail(View):
 class EditCommentView(View):
     def get(self, request, comment_id):
         comment = get_object_or_404(Comment, id=comment_id)
+        if comment.author != request.user:
+            return HttpResponseForbidden("You don't have permission to edit this comment.")
         form = CommentForm(instance=comment)
         context = {'form': form, 'commented': False}  
         return render(request, 'edit_item.html', context)
 
     def post(self, request, comment_id, *args, **kwargs):
         comment = get_object_or_404(Comment, id=comment_id)
+        if comment.author != request.user:
+            return HttpResponseForbidden("You don't have permission to edit this comment.")
         comment_form = CommentForm(data=request.POST, instance=comment)
         if comment_form.is_valid():
             comment_form.instance.email = request.user.email
