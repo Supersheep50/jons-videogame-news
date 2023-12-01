@@ -29,7 +29,7 @@ DEBUG = True
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ["JVN.herokuapp.com", "localhost"]
+ALLOWED_HOSTS = ["JVN.herokuapp.com", "localhost", '8000-supersheep5-jonsvideoga-yufzew98d2y.ws-eu106.gitpod.io']
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
