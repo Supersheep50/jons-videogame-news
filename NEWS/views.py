@@ -76,8 +76,6 @@ class PostDetail(View):
 class EditCommentView(View):
     def get(self, request, comment_id):
         comment = get_object_or_404(Comment, id=comment_id)
-        # Check if the logged-in user is the author of the comment or a superuser.
-        # If not, return a forbidden response.
         if comment.author != request.user and not request.user.is_superuser:
             return HttpResponseForbidden("You don't have permission to edit this comment.")
         
@@ -87,15 +85,11 @@ class EditCommentView(View):
 
     def post(self, request, comment_id, *args, **kwargs):
         comment = get_object_or_404(Comment, id=comment_id)
-        # Repeating the authorization check in the post method to handle form submissions.
         if comment.author != request.user and not request.user.is_superuser:
             return HttpResponseForbidden("You don't have permission to edit this comment.")
 
         comment_form = CommentForm(data=request.POST, instance=comment)
         if comment_form.is_valid():
-            # Updating the comment instance without altering the author or other fields.
-            # Removed the lines that reset the email and name to the current user,
-            # as they should remain unchanged.
             comment = comment_form.save(commit=False)
             comment.save()
             
@@ -118,14 +112,19 @@ class EditCommentView(View):
 class DeleteCommentView(View):
     def get(self, request, comment_id):
         comment = get_object_or_404(Comment, id=comment_id)
+        if comment.author != request.user and not request.user.is_superuser:
+            return HttpResponseForbidden("You don't have permission to delete this comment.")
+
         context = {'comment': comment}
         return render(request, 'delete_item.html', context)
 
     def post(self, request, comment_id):
         comment = get_object_or_404(Comment, id=comment_id)
+        if comment.author != request.user and not request.user.is_superuser:
+            return HttpResponseForbidden("You don't have permission to delete this comment.")
+
         comment.delete()
-        context = {'deleted': True}  
-        return render(request, 'delete_item.html', context)
+        return redirect('your-success-page-url')
 
         
 # Code for Like functionality
