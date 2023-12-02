@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.views.generic import (TemplateView)
 from django.http import HttpResponseRedirect
+from django.http import HttpResponseForbidden
 from .models import Post, Comment
 from .forms import CommentForm
 
@@ -75,38 +76,40 @@ class PostDetail(View):
 class EditCommentView(View):
     def get(self, request, comment_id):
         comment = get_object_or_404(Comment, id=comment_id)
-        if comment.author != request.user:
+        # Check if the logged-in user is the author of the comment or a superuser.
+        # If not, return a forbidden response.
+        if comment.author != request.user and not request.user.is_superuser:
             return HttpResponseForbidden("You don't have permission to edit this comment.")
+        
         form = CommentForm(instance=comment)
         context = {'form': form, 'commented': False}  
         return render(request, 'edit_item.html', context)
 
     def post(self, request, comment_id, *args, **kwargs):
         comment = get_object_or_404(Comment, id=comment_id)
-        if comment.author != request.user:
+        # Repeating the authorization check in the post method to handle form submissions.
+        if comment.author != request.user and not request.user.is_superuser:
             return HttpResponseForbidden("You don't have permission to edit this comment.")
+
         comment_form = CommentForm(data=request.POST, instance=comment)
         if comment_form.is_valid():
-            comment_form.instance.email = request.user.email
-            comment_form.instance.approved = False
-            comment_form.instance.name = request.user.username
+            # Updating the comment instance without altering the author or other fields.
+            # Removed the lines that reset the email and name to the current user,
+            # as they should remain unchanged.
             comment = comment_form.save(commit=False)
             comment.save()
-
-           
+            
             context = {
                 "post": comment.post,
                 "comments": comment.post.comments.filter(approved=True).order_by("-created_on"),
                 "commented": True,
-                "comment_form": comment_form,
+                "comment_form": CommentForm(),
                 "liked": comment.post.likes.filter(id=request.user.id).exists(),
             }
             return render(request, "article.html", context)
         else:
-            comment_form = CommentForm()
-
-        context = {'form': comment_form, 'commented': False}  
-        return render(request, 'edit_item.html', context)
+            context = {'form': comment_form, 'commented': False}  
+            return render(request, 'edit_item.html', context)
 
 
 # Code to Edit comments (credit to tutor support and course material in Readme)
