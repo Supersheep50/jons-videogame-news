@@ -13,7 +13,7 @@
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
                 {% if "placeholder" in post.featured_image.url %}
-                <img src="{% static 'images/background-image-home.webp' %}" width="100%">
+                <img src="{% static 'images/background-image-home.webp' %}">
                 {% else %}
                 <img src=" {{ post.featured_image.url }}" width="100%">
                 {% endif %}
