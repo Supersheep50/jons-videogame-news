@@ -13,6 +13,7 @@
 * [Login Page](/static/images/login-validator.jpg) - No errors.
 * [News Articles](/static/images/news-articles-image.jpg) - 28 errors. Due to the fact that the news article posts are written in the back end using an editor, they throw up errors on the validator as it is reading the text as html. I was not ables to figure out a way around this and it was not mentioned in the course material for the Django Blog.
 - [HTML Errors](/static/images/tutor-support-summernote-fail.png) - Further to this point, I spoke with both my Tutor and Student support. I was informed to leave it the way it is with regards to the summernote errors on the HTML checker.
+-[HTML Width Error](/static/images/html-errors-issue-tutor-support.png) - There is one HTML error remaining which I spent hours troubleshooting with Tutor support. We could not find a fix and believe it has something to do with running an earlier version of bootstrap. My tutor advised to keep the in-style styling and to mention the error here. 
 
 
 
