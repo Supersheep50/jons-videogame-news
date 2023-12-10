@@ -4,14 +4,14 @@
 {% load crispy_forms_tags %}
 
 <!--News post details-->
-<div class="masthead">
+<div>
     <div class="container">
         <div class="row g-0">
-            <div class="col-md-6 masthead-text">
+            <div class="col-md-6">
                 <h1 class="post-title">{{ post.title }}</h1>
                 <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
             </div>
-            <div class="d-none d-md-block col-md-6 masthead-image">
+            <div class="d-none d-md-block col-md-6">
                 {% if "placeholder" in post.featured_image.url %}
                 <img src="{% static 'images/background-image-home.webp' %}" alt = "videogame-image">
                 {% else %}
@@ -25,11 +25,11 @@
 <div class="container">
     <div class="row">
         <div class="col card mb-4  mt-3 left top">
-            <div class="card-body">
+            <div class="card-body card-text ">
 
-                <p class="card-text ">
+              
                     {{ post.content | safe }}
-                </p>
+              
                 <div class="row">
                     <!-- Code for liking comments-->
                     <div class="col-1 ml-auto text-center">
