@@ -292,6 +292,13 @@ The frontend terminal should now be connected and deployed to Heroku.
 - Not exactly a bug but had one instance of not pushing code when I thought I had, Lost all code and work that was around building a delete comment functionality. Only discovered at Readme phase but was thankfully able to recall some of it and also had some of it shared in a comment on Slack. Lesson learned. 
 
 
+## Bug fixes after Project Failing
+
+- This project was failed due to not having proper Defensive Design. It was possible to edit or delete other comments via the comment URLs. This has now been fixed. 
+
+- [Defensive Design](/static/images/defensive-design.png)
+
+
 
 ## Acknowledgements 
 

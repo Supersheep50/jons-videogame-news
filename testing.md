@@ -4,12 +4,16 @@
 
 [W3C](https://validator.w3.org/) was used to validate the HTML on all pages of the website. I have checked the HTML via address input and also by inspecting the page source and running this through the validator.
 
+* After failing the Project, I went back and fixed all of the errors that popped up on the HTML Checker. Like I mentioned to my tutor, the HTML checks failed when using the URLs, but worked fine when using Direct Input, which I originally did. No where in the course material does it say I had to use the URLs.
+
 * [Home Page](/static/images/home-validator.png4) - No errors or warnings.
 * [About Page](/static/images/about-validator.jpg) - No errors.
 * [Contact Page](/static/images/contact-validator.jpg) - No errors.
 * [Register Page](/static/images/register-validator.jpg) - No errors.
 * [Login Page](/static/images/login-validator.jpg) - No errors.
 * [News Articles](/static/images/news-articles-image.jpg) - 28 errors. Due to the fact that the news article posts are written in the back end using an editor, they throw up errors on the validator as it is reading the text as html. I was not ables to figure out a way around this and it was not mentioned in the course material for the Django Blog.
+- [HTML Errors](/static/images/tutor-support-summernote-fail.png)Further to this point, I spoke with both my Tutor and Student support. I was informed to leave it the way it is with regards to the summernote errors on the HTML checker.
+
 
 
 ### Validator Testing - CSS

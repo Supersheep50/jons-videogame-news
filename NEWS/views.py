@@ -63,6 +63,7 @@ class PostDetail(View):
 
 # Code to Edit comments (credit to course material in Readme)
 
+
 class EditCommentView(View):
     def get(self, request, comment_id):
         comment = get_object_or_404(Comment, id=comment_id)
@@ -80,8 +81,6 @@ class EditCommentView(View):
                 'commented': False
             }
         )
-
-    
 
     def post(self, request, comment_id, *args, **kwargs):
         comment = get_object_or_404(Comment, id=comment_id)
